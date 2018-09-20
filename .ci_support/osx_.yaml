@@ -1,0 +1,29 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+c_compiler:
+- toolchain_c
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+gmp:
+- '6'
+jpeg:
+- '9'
+libpng:
+- 1.6.34
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
+occt:
+- '7.3'
+pin_run_as_build:
+  gmp:
+    max_pin: x
+  jpeg:
+    max_pin: x
+  libpng:
+    max_pin: x.x
+  occt:
+    max_pin: x.x

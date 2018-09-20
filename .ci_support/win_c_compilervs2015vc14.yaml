@@ -1,0 +1,26 @@
+c_compiler:
+- vs2015
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+jpeg:
+- '9'
+libpng:
+- 1.6.34
+occt:
+- '7.3'
+pin_run_as_build:
+  jpeg:
+    max_pin: x
+  libpng:
+    max_pin: x.x
+  occt:
+    max_pin: x.x
+  vc:
+    max_pin: x
+vc:
+- '14'
+zip_keys:
+- - vc
+  - c_compiler
