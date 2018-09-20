@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "3.0.6" %}
-{% set md5 = "78bbfdd695b29cfef18a99f93226afc5" %}
+{% set version = "4.0.1" %}
+{% set md5 = "7068f1935e414ff41b4fbaff089977f9" %}
 
 package:
   name: {{ name|lower }}
