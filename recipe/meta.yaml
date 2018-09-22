@@ -23,6 +23,7 @@ requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
     - mkl-devel  # [win]
 
   host:
