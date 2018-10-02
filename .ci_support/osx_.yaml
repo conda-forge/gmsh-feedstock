@@ -6,6 +6,8 @@ channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
+fortran_compiler:
+- toolchain_fort
 gmp:
 - '6'
 jpeg:
