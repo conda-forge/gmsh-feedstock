@@ -6,6 +6,8 @@ channel_targets:
 - conda-forge main
 docker_image:
 - condaforge/linux-anvil
+fortran_compiler:
+- toolchain_fort
 gmp:
 - '6'
 jpeg:

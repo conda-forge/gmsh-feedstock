@@ -4,6 +4,8 @@ channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
+fortran_compiler:
+- flang
 jpeg:
 - '9'
 libpng:

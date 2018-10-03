@@ -16,13 +16,14 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
 
 requirements:
   build:
     - cmake
     - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
     - mkl-devel  # [win]
 
   host:
