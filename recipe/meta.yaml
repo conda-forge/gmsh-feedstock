@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "3.0.6" %}
-{% set md5 = "78bbfdd695b29cfef18a99f93226afc5" %}
+{% set version = "4.0.3" %}
+{% set md5 = "2cab83dc40a4219d6c9c311e4bea4fa3" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ source:
 
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win and vc<14]
 
 requirements:
