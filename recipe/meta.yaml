@@ -16,7 +16,7 @@ source:
 
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win and vc<14]
 
 requirements:
@@ -34,6 +34,7 @@ requirements:
     - libpng
     - jpeg
     - mesalib  # [linux]
+    - mkl  # [win]
 
   run:
     - gmp  # [not win]
