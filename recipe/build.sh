@@ -20,7 +20,7 @@ cmake \
     -DENABLE_SLEPC=OFF \
     .. | tee cmake.log 2>&1
 
-make | tee make.log 2>&1
+make -j${CPU_COUNT} | tee make.log 2>&1
 make install | tee install.log 2>&1
 
 # vim: set ai et nu:
