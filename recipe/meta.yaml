@@ -26,7 +26,14 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}   # [not win]
     - mkl-devel  # [win]
+    - {{ cdt('libselinux') }}        # [linux]
+    - {{ cdt('libxcb') }}            # [linux]
+    - {{ cdt('libxau') }}            # [linux]
+    - {{ cdt('libxdamage') }}        # [linux]
+    - {{ cdt('libxxf86vm') }}        # [linux]
     - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+
 
   host:
     - gmp  # [not win]
