@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "3.0.6" %}
-{% set md5 = "78bbfdd695b29cfef18a99f93226afc5" %}
+{% set version = "4.1.5" %}
+{% set sha256 = "654d38203f76035a281006b77dcb838987a44fd549287f11c53a1e9cdf598f46" %}
 
 package:
   name: {{ name|lower }}
@@ -9,40 +9,62 @@ package:
 source:
   fn: {{ name }}-{{ version }}-source.tgz
   url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
-  md5: {{ md5 }}
+  sha256: {{ sha256 }}
   patches:
     # conda mkl doesn't come with libguide40
     - my.patch
 
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win and vc<14]
+  ignore_run_exports:
+    - fltk
 
 requirements:
   build:
     - cmake
     - {{ compiler('c') }}
-    - {{ compiler('fortran') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}   # [not win]
     - mkl-devel  # [win]
+    - {{ cdt('libselinux') }}        # [linux]
+    - {{ cdt('libxcb') }}            # [linux]
+    - {{ cdt('libxau') }}            # [linux]
+    - {{ cdt('libxdamage') }}        # [linux]
+    - {{ cdt('libxxf86vm') }}        # [linux]
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+
 
   host:
     - gmp  # [not win]
-    - openblas  # [linux]
+    - openblas  # [not win]
     - occt
     - fltk
     - libpng
     - jpeg
-    - mesalib  # [linux]
+    - libglu  # [linux]
     - mkl  # [win]
+    - zlib
+    - xorg-libxfixes     # [linux]
+    - xorg-libxext       # [linux]
+    - xorg-libxrender    # [linux]
+    - xorg-libx11        # [linux]
 
   run:
     - gmp  # [not win]
-    - openblas  # [linux]
+    - openblas  # [not win]
     - mkl  # [win]
     - occt
     - libpng
     - jpeg
+    - zlib
+    - libglu  # [linux]
+    - xorg-libxfixes     # [linux]
+    - xorg-libxext       # [linux]
+    - xorg-libxrender    # [linux]
+    - xorg-libx11        # [linux]
 
 test:
   commands:

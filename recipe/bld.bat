@@ -12,6 +12,7 @@ cmake -G "NMake Makefiles" ^
       -D ENABLE_OS_SPECIFIC_INSTALL=OFF ^
       -D ENABLE_PETSC=OFF ^
       -D ENABLE_SLEPC=OFF ^
+      -D ENABLE_HXT=0 ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 
