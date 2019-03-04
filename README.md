@@ -36,6 +36,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-gmsh-green.svg)](https://anaconda.org/conda-forge/gmsh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gmsh.svg)](https://anaconda.org/conda-forge/gmsh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gmsh.svg)](https://anaconda.org/conda-forge/gmsh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gmsh.svg)](https://anaconda.org/conda-forge/gmsh) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-python--gmsh-green.svg)](https://anaconda.org/conda-forge/python-gmsh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-gmsh.svg)](https://anaconda.org/conda-forge/python-gmsh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-gmsh.svg)](https://anaconda.org/conda-forge/python-gmsh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-gmsh.svg)](https://anaconda.org/conda-forge/python-gmsh) |
 
 Installing gmsh
 ===============
@@ -46,10 +47,10 @@ Installing `gmsh` from the `conda-forge` channel can be achieved by adding `cond
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `gmsh` can be installed with:
+Once the `conda-forge` channel has been enabled, `gmsh, python-gmsh` can be installed with:
 
 ```
-conda install gmsh
+conda install gmsh python-gmsh
 ```
 
 It is possible to list all of the versions of `gmsh` available on your platform with:
