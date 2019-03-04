@@ -14,8 +14,9 @@ cd build
 # build.
 cmake \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
+    -DCMAKE_PREFIX_PATH=$PREFIX \
+    -DCMAKE_INSTALL_LIBDIR=lib \
     -DENABLE_OS_SPECIFIC_INSTALL=OFF \
-    -DENABLE_MATCH=OFF \
     -DENABLE_PETSC=OFF \
     -DENABLE_SLEPC=OFF \
     .. | tee cmake.log 2>&1

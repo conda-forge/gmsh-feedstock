@@ -18,6 +18,8 @@ source:
 build:
   number: 0
   skip: True  # [win and vc<14]
+  ignore_run_exports:
+    - fltk
 
 requirements:
   build:
@@ -44,6 +46,11 @@ requirements:
     - jpeg
     - libglu  # [linux]
     - mkl  # [win]
+    - zlib
+    - xorg-libxfixes     # [linux]
+    - xorg-libxext       # [linux]
+    - xorg-libxrender    # [linux]
+    - xorg-libx11        # [linux]
 
   run:
     - gmp  # [not win]
@@ -52,6 +59,12 @@ requirements:
     - occt
     - libpng
     - jpeg
+    - zlib
+    - libglu  # [linux]
+    - xorg-libxfixes     # [linux]
+    - xorg-libxext       # [linux]
+    - xorg-libxrender    # [linux]
+    - xorg-libx11        # [linux]
 
 test:
   commands:
