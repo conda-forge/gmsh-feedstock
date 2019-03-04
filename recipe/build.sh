@@ -1,8 +1,10 @@
-#!/bin/sh
+#!/bin/bash
 # see http://conda.pydata.org/docs/build.html for hacking instructions.
 
+set -e
+
 if [[ "$c_compiler" == "gcc" ]]; then
-  export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib"
+  export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib:${BUILD_PREFIX}/${HOST}/sysroot/usr/include"
 fi
 
 # unpack.
