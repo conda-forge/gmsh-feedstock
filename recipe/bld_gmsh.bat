@@ -29,3 +29,5 @@ if errorlevel 1 exit 1
 :: Install.
 nmake install
 if errorlevel 1 exit 1
+
+rm %LIBRARY_PREFIX%\lib\gmsh.py

@@ -27,4 +27,5 @@ cmake \
 make -j${CPU_COUNT} | tee make.log 2>&1
 make install | tee install.log 2>&1
 
+rm -f ${PREFIX}/lib/gmsh.py
 # vim: set ai et nu:
