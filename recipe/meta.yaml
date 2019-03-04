@@ -31,7 +31,6 @@ outputs:
         - cmake
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
-        - {{ compiler('fortran') }}   # [not win]
         - mkl-devel  # [win]
         - {{ cdt('libselinux') }}        # [linux]
         - {{ cdt('libxcb') }}            # [linux]

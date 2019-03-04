@@ -21,6 +21,7 @@ cmake \
     -DENABLE_OS_SPECIFIC_INSTALL=OFF \
     -DENABLE_PETSC=OFF \
     -DENABLE_SLEPC=OFF \
+    -DBLAS_LAPACK_LIBRARIES="$PREFIX/lib/libblas${SHLIB_EXT};$PREFIX/lib/liblapack${SHLIB_EXT}" \
     .. | tee cmake.log 2>&1
 
 make -j${CPU_COUNT} | tee make.log 2>&1
