@@ -76,8 +76,8 @@ outputs:
   - name: python-gmsh
     build:
       noarch: python
-      skip: true  # [win]
-    script: install_python.sh
+    script: install_python.sh   # [not win]
+    script: install_python.bat  # [win]
     requirements:
       run:
         - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}

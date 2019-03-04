@@ -17,7 +17,7 @@ index 02f124062..dcf4f97d5 100644
 +libdir = sys.prefix
  if platform.system() == 'Windows':
 -    lib = CDLL(os.path.join(libdir, "gmsh-4.1.dll"))
-+    lib = CDLL(os.path.join(libdir, "Library", "bin", "gmsh-{}.dll".format(GMSH_API_VERSION)))
++    lib = CDLL(os.path.join(libdir, "Library", "bin", "gmsh.dll"))
  elif platform.system() == 'Darwin':
 -    lib = CDLL(os.path.join(libdir, "libgmsh.dylib"))
 +    lib = CDLL(os.path.join(libdir, "lib", "libgmsh.dylib"))
