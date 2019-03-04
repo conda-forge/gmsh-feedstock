@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.0.4" %}
-{% set md5 = "45bee340161ec77b39bc00e16aa4173b" %}
+{% set version = "4.1.5" %}
+{% set sha256 = "654d38203f76035a281006b77dcb838987a44fd549287f11c53a1e9cdf598f46" %}
 
 package:
   name: {{ name|lower }}
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}-source.tgz
   url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
-  md5: {{ md5 }}
+  md5: {{ sha256 }}
   patches:
     # conda mkl doesn't come with libguide40
     - my.patch
