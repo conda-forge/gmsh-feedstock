@@ -34,7 +34,7 @@ requirements:
     - fltk
     - libpng
     - jpeg
-    - mesalib  # [linux]
+    - libglu  # [linux]
     - mkl  # [win]
 
   run:
