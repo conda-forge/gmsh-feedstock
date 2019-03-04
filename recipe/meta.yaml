@@ -34,6 +34,7 @@ requirements:
     - libpng
     - jpeg
     - mesalib  # [linux]
+    - mkl  # [win]
 
   run:
     - gmp  # [not win]
