@@ -23,12 +23,13 @@ requirements:
   build:
     - cmake
     - {{ compiler('c') }}
-    - {{ compiler('fortran') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}   # [not win]
     - mkl-devel  # [win]
 
   host:
     - gmp  # [not win]
-    - openblas  # [linux]
+    - openblas  # [not win]
     - occt
     - fltk
     - libpng
@@ -38,7 +39,7 @@ requirements:
 
   run:
     - gmp  # [not win]
-    - openblas  # [linux]
+    - openblas  # [not win]
     - mkl  # [win]
     - occt
     - libpng
