@@ -13,9 +13,10 @@ source:
   patches:
     # conda mkl doesn't come with libguide40
     - my.patch
+    - python_locate_lib.diff
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: gmsh
