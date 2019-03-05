@@ -31,3 +31,4 @@ nmake install
 if errorlevel 1 exit 1
 
 rm %LIBRARY_PREFIX%\lib\gmsh.py
+move %LIBRARY_PREFIX%\lib\gmsh.dll %LIBRARY_PREFIX%\bin\
