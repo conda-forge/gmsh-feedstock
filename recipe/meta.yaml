@@ -13,62 +13,79 @@ source:
   patches:
     # conda mkl doesn't come with libguide40
     - my.patch
-
+    - python_locate_lib.diff
 
 build:
-  number: 0
-  skip: True  # [win and vc<14]
-  ignore_run_exports:
-    - fltk
+  number: 1
 
-requirements:
-  build:
-    - cmake
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
-    - {{ compiler('fortran') }}   # [not win]
-    - mkl-devel  # [win]
-    - {{ cdt('libselinux') }}        # [linux]
-    - {{ cdt('libxcb') }}            # [linux]
-    - {{ cdt('libxau') }}            # [linux]
-    - {{ cdt('libxdamage') }}        # [linux]
-    - {{ cdt('libxxf86vm') }}        # [linux]
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+outputs:
+  - name: gmsh
+    build:
+      skip: True  # [win and vc<14]
+      ignore_run_exports:
+        - fltk
+    script: build_gmsh.sh   # [not win]
+    script: bld_gmsh.bat    # [win]
+    requirements:
+      build:
+        - cmake
+        - {{ compiler('c') }}
+        - {{ compiler('cxx') }}
+        - mkl-devel  # [win]
+        - {{ cdt('libselinux') }}        # [linux]
+        - {{ cdt('libxcb') }}            # [linux]
+        - {{ cdt('libxau') }}            # [linux]
+        - {{ cdt('libxdamage') }}        # [linux]
+        - {{ cdt('libxxf86vm') }}        # [linux]
+        - {{ cdt('mesa-libgl-devel') }}  # [linux]
+        - {{ cdt('mesa-dri-drivers') }}  # [linux]
 
+      host:
+        - gmp  # [not win]
+        - openblas  # [not win]
+        - occt
+        - fltk
+        - libpng
+        - jpeg
+        - libglu  # [linux]
+        - mkl  # [win]
+        - zlib
+        - xorg-libxfixes     # [linux]
+        - xorg-libxext       # [linux]
+        - xorg-libxrender    # [linux]
+        - xorg-libx11        # [linux]
 
-  host:
-    - gmp  # [not win]
-    - openblas  # [not win]
-    - occt
-    - fltk
-    - libpng
-    - jpeg
-    - libglu  # [linux]
-    - mkl  # [win]
-    - zlib
-    - xorg-libxfixes     # [linux]
-    - xorg-libxext       # [linux]
-    - xorg-libxrender    # [linux]
-    - xorg-libx11        # [linux]
+      run:
+        - gmp  # [not win]
+        - openblas  # [not win]
+        - mkl  # [win]
+        - occt
+        - libpng
+        - jpeg
+        - zlib
+        - libglu  # [linux]
+        - xorg-libxfixes     # [linux]
+        - xorg-libxext       # [linux]
+        - xorg-libxrender    # [linux]
+        - xorg-libx11        # [linux]
 
-  run:
-    - gmp  # [not win]
-    - openblas  # [not win]
-    - mkl  # [win]
-    - occt
-    - libpng
-    - jpeg
-    - zlib
-    - libglu  # [linux]
-    - xorg-libxfixes     # [linux]
-    - xorg-libxext       # [linux]
-    - xorg-libxrender    # [linux]
-    - xorg-libx11        # [linux]
+    test:
+      commands:
+        - gmsh -help
 
-test:
-  commands:
-    - gmsh -help
+  - name: python-gmsh
+    build:
+      noarch: python
+    script: install_python.sh   # [not win]
+    script: install_python.bat  # [win]
+    requirements:
+      run:
+        - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}
+        - numpy
+        - python
+    test:
+      imports:
+        - gmsh
 
 about:
   home: http://geuz.org/gmsh/
@@ -89,3 +106,5 @@ about:
 extra:
   recipe-maintainers:
     - guyer
+    - isuruf
+    - xywei

@@ -10,6 +10,8 @@ cd build
 cmake -G "NMake Makefiles" ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D ENABLE_OS_SPECIFIC_INSTALL=OFF ^
+      -D ENABLE_BUILD_DYNAMIC=ON ^
+      -D ENABLE_BUILD_SHARED=ON ^
       -D ENABLE_PETSC=OFF ^
       -D ENABLE_SLEPC=OFF ^
       -D ENABLE_HXT=0 ^
@@ -27,3 +29,6 @@ if errorlevel 1 exit 1
 :: Install.
 nmake install
 if errorlevel 1 exit 1
+
+rm %LIBRARY_PREFIX%\lib\gmsh.py
+move %LIBRARY_PREFIX%\lib\gmsh.dll %LIBRARY_PREFIX%\bin\

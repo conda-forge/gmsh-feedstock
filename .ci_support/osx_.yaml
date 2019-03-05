@@ -6,6 +6,8 @@ channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
+cxx_compiler:
+- clangxx
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
@@ -22,6 +24,8 @@ macos_min_version:
 - '10.9'
 occt:
 - '7.3'
+openblas:
+- 0.3.3
 pin_run_as_build:
   gmp:
     max_pin: x
@@ -31,3 +35,9 @@ pin_run_as_build:
     max_pin: x.x
   occt:
     max_pin: x.x
+  openblas:
+    max_pin: x.x.x
+  zlib:
+    max_pin: x.x
+zlib:
+- '1.2'
