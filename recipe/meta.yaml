@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.1.5" %}
-{% set sha256 = "654d38203f76035a281006b77dcb838987a44fd549287f11c53a1e9cdf598f46" %}
+{% set version = "4.2.1" %}
+{% set sha256 = "1f11481e68900dc256f88aaed18d03e93b416ba01e9e8c3dc3f6d59a211f0561" %}
 
 package:
   name: {{ name|lower }}
@@ -11,12 +11,10 @@ source:
   url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
   sha256: {{ sha256 }}
   patches:
-    # conda mkl doesn't come with libguide40
-    - my.patch
-    - python_locate_lib.diff
+    - fltk_config.patch
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: gmsh
