@@ -70,6 +70,7 @@ outputs:
     test:
       commands:
         - gmsh -help
+        - [[ "$(gmsh --version 2>&1)" == "{{ version }}" ]]   # [unix]
 
   - name: python-gmsh
     build:
