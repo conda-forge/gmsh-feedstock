@@ -14,7 +14,7 @@ source:
     - fltk_config.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: gmsh
@@ -70,6 +70,7 @@ outputs:
     test:
       commands:
         - gmsh -help
+        - test "$(gmsh --version 2>&1)" == "{{ version }}"   # [unix]
 
   - name: python-gmsh
     build:
