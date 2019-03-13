@@ -8,8 +8,6 @@ cxx_compiler:
 - gxx
 docker_image:
 - condaforge/linux-anvil-comp7
-fortran_compiler:
-- gfortran
 gmp:
 - '6'
 jpeg:

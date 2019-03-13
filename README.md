@@ -124,4 +124,6 @@ Feedstock Maintainers
 =====================
 
 * [@guyer](https://github.com/guyer/)
+* [@isuruf](https://github.com/isuruf/)
+* [@xywei](https://github.com/xywei/)
 
