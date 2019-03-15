@@ -10,8 +10,6 @@ source:
   fn: {{ name }}-{{ version }}-source.tgz
   url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
   sha256: {{ sha256 }}
-  patches:
-    - fltk_config.patch
 
 build:
   number: 0
@@ -29,7 +27,6 @@ outputs:
         - cmake
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
-        - mkl-devel  # [win]
         - {{ cdt('libselinux') }}        # [linux]
         - {{ cdt('libxcb') }}            # [linux]
         - {{ cdt('libxau') }}            # [linux]
@@ -46,7 +43,7 @@ outputs:
         - libpng
         - jpeg
         - libglu  # [linux]
-        - mkl  # [win]
+        - mkl-devel  # [win]
         - zlib
         - xorg-libxfixes     # [linux]
         - xorg-libxext       # [linux]
@@ -56,7 +53,6 @@ outputs:
       run:
         - gmp  # [not win]
         - openblas  # [not win]
-        - mkl  # [win]
         - occt
         - libpng
         - jpeg
