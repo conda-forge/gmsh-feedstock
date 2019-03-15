@@ -16,6 +16,7 @@ cmake -G "NMake Makefiles" ^
       -D ENABLE_SLEPC=OFF ^
       -D ENABLE_HXT=0 ^
       -D BLAS_LAPACK_LIBRARIES=%LIBRARY_PREFIX%\lib\mkl_rt.lib ^
+      -D GMSH_RELEASE=1 ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 
