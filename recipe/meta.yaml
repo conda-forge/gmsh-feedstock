@@ -39,7 +39,7 @@ outputs:
 
       host:
         - libblas
-        - libcblas
+        - liblapack
         - gmp  # [not win]
         - occt
         - fltk
