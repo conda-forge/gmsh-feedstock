@@ -36,14 +36,14 @@ outputs:
         - {{ cdt('mesa-dri-drivers') }}  # [linux]
 
       host:
+        - libblas
+        - liblapack
         - gmp  # [not win]
-        - openblas  # [not win]
         - occt
         - fltk
         - libpng
         - jpeg
         - libglu  # [linux]
-        - mkl-devel  # [win]
         - zlib
         - xorg-libxfixes     # [linux]
         - xorg-libxext       # [linux]
@@ -52,7 +52,6 @@ outputs:
 
       run:
         - gmp  # [not win]
-        - openblas  # [not win]
         - occt
         - libpng
         - jpeg

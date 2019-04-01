@@ -16,12 +16,14 @@ gmp:
 - '6'
 jpeg:
 - '9'
+libblas:
+- 3.8 *netlib
+libcblas:
+- 3.8 *netlib
 libpng:
 - 1.6.35
 occt:
 - '7.3'
-openblas:
-- 0.3.3
 pin_run_as_build:
   gmp:
     max_pin: x
@@ -31,8 +33,6 @@ pin_run_as_build:
     max_pin: x.x
   occt:
     max_pin: x.x
-  openblas:
-    max_pin: x.x.x
   zlib:
     max_pin: x.x
 zlib:
