@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.2.1" %}
-{% set sha256 = "1f11481e68900dc256f88aaed18d03e93b416ba01e9e8c3dc3f6d59a211f0561" %}
+{% set version = "4.2.2" %}
+{% set sha256 = "e9ee9f5c606bbec5f2adbb8c3d6023c4e2577f487fa4e4ecfcfc94a241cc8dcc" %}
 
 package:
   name: {{ name|lower }}
@@ -10,11 +10,9 @@ source:
   fn: {{ name }}-{{ version }}-source.tgz
   url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
   sha256: {{ sha256 }}
-  patches:
-    - fltk_config.patch
 
 build:
-  number: 3
+  number: 0
 
 outputs:
   - name: gmsh
