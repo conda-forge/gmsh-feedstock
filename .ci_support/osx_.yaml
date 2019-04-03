@@ -18,8 +18,8 @@ jpeg:
 - '9'
 libblas:
 - 3.8 *netlib
-libcblas:
-- 3.8 *netlib
+liblapack:
+- 3.8.0 *netlib
 libpng:
 - 1.6.35
 macos_machine:
