@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.2.2" %}
-{% set sha256 = "e9ee9f5c606bbec5f2adbb8c3d6023c4e2577f487fa4e4ecfcfc94a241cc8dcc" %}
+{% set version = "4.4.1" %}
+{% set sha256 = "853c6438fc4e4b765206e66a514b09182c56377bb4b73f1d0d26eda7eb8af0dc" %}
 
 package:
   name: {{ name|lower }}
@@ -49,6 +49,7 @@ outputs:
         - xorg-libxext       # [linux]
         - xorg-libxrender    # [linux]
         - xorg-libx11        # [linux]
+        - xorg-libxmu        # [linux]
 
       run:
         - gmp  # [not win]
@@ -61,6 +62,7 @@ outputs:
         - xorg-libxext       # [linux]
         - xorg-libxrender    # [linux]
         - xorg-libx11        # [linux]
+        - xorg-libxmu        # [linux]
 
     test:
       commands:
@@ -102,3 +104,4 @@ extra:
     - guyer
     - isuruf
     - xywei
+    - looooo
