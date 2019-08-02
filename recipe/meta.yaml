@@ -49,6 +49,7 @@ outputs:
         - xorg-libxext       # [linux]
         - xorg-libxrender    # [linux]
         - xorg-libx11        # [linux]
+        - xorg-libxmu        # [linux]
 
       run:
         - gmp  # [not win]
@@ -61,6 +62,7 @@ outputs:
         - xorg-libxext       # [linux]
         - xorg-libxrender    # [linux]
         - xorg-libx11        # [linux]
+        - xorg-libxmu        # [linux]
 
     test:
       commands:
