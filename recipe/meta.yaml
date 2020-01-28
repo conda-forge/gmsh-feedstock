@@ -8,8 +8,8 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}-source.tgz
-  url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
-  sha256: {{ sha256 }}
+  git_url: https://gitlab.onelab.info/gmsh/gmsh.git
+  git_depth: 1
 
 build:
   number: 1
