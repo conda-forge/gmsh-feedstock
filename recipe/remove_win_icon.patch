@@ -1,0 +1,36 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e885889f2..0e5ca6e10 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1465,9 +1465,6 @@ endif()
+ 
+ if(MSVC)
+   add_definitions(-DNOMINMAX -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE)
+-  if(HAVE_FLTK)
+-    set(GMSH_SRC ${GMSH_SRC};Fltk/Win32Icon.rc)
+-  endif()
+ endif()
+ 
+ # add C functions API
+diff --git a/Fltk/Win32Icon.rc b/Fltk/Win32Icon.rc
+deleted file mode 100644
+index ab3f4322e..000000000
+--- a/Fltk/Win32Icon.rc
++++ /dev/null
+@@ -1,5 +0,0 @@
+-
+-#include "WinIcon.h"
+-
+-IDI_ICON   ICON    DISCARDABLE     "Win32Icon.ico"
+-
+diff --git a/Fltk/Win64Icon.rc b/Fltk/Win64Icon.rc
+deleted file mode 100644
+index 692b06829..000000000
+--- a/Fltk/Win64Icon.rc
++++ /dev/null
+@@ -1,5 +0,0 @@
+-
+-#include "WinIcon.h"
+-
+-IDI_ICON   ICON    DISCARDABLE     "Win64Icon.ico"
+-
