@@ -10,8 +10,6 @@ source:
   fn: {{ name }}-{{ version }}-source.tgz
   url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
   sha256: {{ sha256 }}
-  patches:
-    - remove_win_icon.patch
 
 build:
   number: 0
