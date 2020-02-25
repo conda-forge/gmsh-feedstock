@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.5.2" %}
-{% set sha256 = "0120fe240d32ff1d7457f1b6b350cb85c1e01801f9d371a8656c526474882682" %}
+{% set version = "4.5.3" %}
+{% set sha256 = "b234560d6ac9d6d622187d9c4fc8d50bf51b1abe2b5fd0cac1cf6f037780764f" %}
 
 package:
   name: {{ name|lower }}
@@ -19,11 +19,11 @@ build:
 outputs:
   - name: gmsh
     build:
-      skip: True  # [win and vc<14]
+      skip: true  # [win and vc<14]
       ignore_run_exports:
         - fltk
-    script: build_gmsh.sh   # [not win]
-    script: bld_gmsh.bat    # [win]
+    script: build_gmsh.sh  # [not win]
+    script: bld_gmsh.bat  # [win]
     requirements:
       build:
         - cmake
@@ -74,7 +74,7 @@ outputs:
   - name: python-gmsh
     build:
       noarch: python
-    script: install_python.sh   # [not win]
+    script: install_python.sh  # [not win]
     script: install_python.bat  # [win]
     requirements:
       run:
@@ -89,7 +89,7 @@ about:
   home: http://geuz.org/gmsh/
   license: GPL
   license_family: GPL
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
   summary: A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities
   description: |
     Gmsh is a free 3D finite element grid generator with a build-in CAD
