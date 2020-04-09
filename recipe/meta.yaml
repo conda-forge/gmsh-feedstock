@@ -85,7 +85,7 @@ outputs:
 
 about:
   home: http://geuz.org/gmsh/
-  license: GPL
+  license: GPL-2
   license_family: GPL
   license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
   summary: A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities
