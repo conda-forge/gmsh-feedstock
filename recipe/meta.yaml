@@ -3,7 +3,7 @@
 {% set sha256 = "0f2c55e50fb6c478ebc8977f6341c223754cbf3493b7b0d683b4395ae9f2ad1c" %}
 
 package:
-  name: {{ name|lower }}
+  name: gmsh-packages
   version: {{ version }}
 
 source:
