@@ -1,5 +1,5 @@
-About gmsh
-==========
+About gmsh-packages
+===================
 
 Home: http://geuz.org/gmsh/
 
@@ -23,7 +23,14 @@ Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>Travis</td>
+    <td>
+      <a href="https://travis-ci.com/conda-forge/gmsh-feedstock">
+        <img alt="macOS" src="https://img.shields.io/travis/com/conda-forge/gmsh-feedstock/master.svg?label=macOS">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -37,36 +44,30 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux</td>
+              <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5573&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=master&jobName=linux&configuration=linux_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=master&jobName=linux&configuration=linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx</td>
+              <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5573&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=master&jobName=osx&configuration=osx_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=master&jobName=osx&configuration=osx_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win</td>
+              <td>win_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5573&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=master&jobName=win&configuration=win_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=master&jobName=win&configuration=win_64_" alt="variant">
                 </a>
               </td>
             </tr>
           </tbody>
         </table>
       </details>
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
     </td>
   </tr>
 </table>
@@ -79,10 +80,10 @@ Current release info
 | [![Conda Recipe](https://img.shields.io/badge/recipe-gmsh-green.svg)](https://anaconda.org/conda-forge/gmsh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/gmsh.svg)](https://anaconda.org/conda-forge/gmsh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/gmsh.svg)](https://anaconda.org/conda-forge/gmsh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/gmsh.svg)](https://anaconda.org/conda-forge/gmsh) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-python--gmsh-green.svg)](https://anaconda.org/conda-forge/python-gmsh) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/python-gmsh.svg)](https://anaconda.org/conda-forge/python-gmsh) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/python-gmsh.svg)](https://anaconda.org/conda-forge/python-gmsh) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/python-gmsh.svg)](https://anaconda.org/conda-forge/python-gmsh) |
 
-Installing gmsh
-===============
+Installing gmsh-packages
+========================
 
-Installing `gmsh` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `gmsh-packages` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
 
 ```
 conda config --add channels conda-forge
@@ -139,17 +140,17 @@ Terminology
                   produce the finished article (built conda distributions)
 
 
-Updating gmsh-feedstock
-=======================
+Updating gmsh-packages-feedstock
+================================
 
-If you would like to improve the gmsh recipe or build a new
+If you would like to improve the gmsh-packages recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `conda-forge` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `conda-forge` channel.
-Note that all branches in the conda-forge/gmsh-feedstock are
+Note that all branches in the conda-forge/gmsh-packages-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

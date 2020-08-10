@@ -1,3 +1,5 @@
 provider:
-  win: azure
+  osx_64: travis
 conda_forge_output_validation: true
+travis:
+  osx_image: xcode6.4
