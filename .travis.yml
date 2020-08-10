@@ -1,0 +1,20 @@
+# This file was generated automatically from conda-smithy. To update this configuration,
+# update the conda-forge.yml and/or the recipe/meta.yaml.
+
+language: generic
+
+
+
+matrix:
+  include:
+    - env: CONFIG=osx_64_ UPLOAD_PACKAGES=True PLATFORM=osx-64
+      os: osx
+      osx_image: xcode6.4
+      arch: amd64
+
+script:
+  - export CI=travis
+  - export GIT_BRANCH="$TRAVIS_BRANCH"
+  - export FEEDSTOCK_NAME=$(basename ${TRAVIS_REPO_SLUG})
+
+  - if [[ ${PLATFORM} =~ .*osx.* ]]; then ./.scripts/run_osx_build.sh; fi
