@@ -4,6 +4,8 @@ c_compiler:
 - gcc
 c_compiler_version:
 - '7'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge,defaults
 channel_targets:
@@ -13,7 +15,7 @@ cxx_compiler:
 cxx_compiler_version:
 - '7'
 docker_image:
-- condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-comp7
 gmp:
 - '6'
 jpeg:
@@ -21,7 +23,7 @@ jpeg:
 libblas:
 - 3.8 *netlib
 liblapack:
-- 3.8.0 *netlib
+- 3.8 *netlib
 libpng:
 - '1.6'
 occt:
@@ -39,5 +41,8 @@ pin_run_as_build:
     max_pin: x.x
 target_platform:
 - linux-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
 zlib:
 - '1.2'

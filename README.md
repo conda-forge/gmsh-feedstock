@@ -5,7 +5,7 @@ Home: http://geuz.org/gmsh/
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmsh-feedstock/blob/master/LICENSE.txt)
 
 Summary: A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities
 
