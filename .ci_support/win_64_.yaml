@@ -13,7 +13,7 @@ jpeg:
 libblas:
 - 3.8 *netlib
 liblapack:
-- 3.8.0 *netlib
+- 3.8 *netlib
 libpng:
 - '1.6'
 occt:
