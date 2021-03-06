@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.6.0" %}
-{% set sha256 = "0f2c55e50fb6c478ebc8977f6341c223754cbf3493b7b0d683b4395ae9f2ad1c" %}
+{% set version = "4.8.0" %}
+{% set sha256 = "2587783c4b02963f9d8afb717c9954caefa463ea2e0a12e1659307e6a0d7ea6b" %}
 
 package:
   name: gmsh-packages
