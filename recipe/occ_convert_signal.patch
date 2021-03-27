@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4122a22..619d2a7 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1337,7 +1337,7 @@ if(ENABLE_OCC)
+     endif()
+     if(WIN32)
+       list(APPEND EXTERNAL_LIBRARIES "winspool")
+-      add_definitions(-DOCC_CONVERT_SIGNALS)
++      # add_definitions(-DOCC_CONVERT_SIGNALS)
+     elseif(MSVC)
+       add_definitions(-DWNT)
+     endif()
