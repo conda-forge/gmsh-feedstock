@@ -27,6 +27,7 @@ outputs:
     requirements:
       build:
         - cmake
+        - make  # [unix]
         - {{ compiler('c') }}
         - {{ compiler('cxx') }}
         - {{ cdt('libselinux') }}        # [linux]
