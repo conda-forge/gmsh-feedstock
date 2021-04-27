@@ -11,8 +11,8 @@ source:
   url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
   sha256: {{ sha256 }}
   patches:
-    - occ_convert_signal.patch
-    - 421.diff
+    - patches/occ_convert_signal.patch
+    - patches/421.patch # [win]
 
 build:
   number: 0

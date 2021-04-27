@@ -1,0 +1,30 @@
+From 85b876cd7d810b5b7c6347563010d0b226e466e8 Mon Sep 17 00:00:00 2001
+From: Isuru Fernando <isuruf@gmail.com>
+Date: Tue, 27 Apr 2021 19:58:10 +0000
+Subject: [PATCH] Fix windows build failure with FLTK and Opencascade
+
+---
+ Common/gmsh.cpp | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/Common/gmsh.cpp b/Common/gmsh.cpp
+index 591a063a5..33ec3890c 100644
+--- a/Common/gmsh.cpp
++++ b/Common/gmsh.cpp
+@@ -5,6 +5,13 @@
+ 
+ #include <sstream>
+ #include "GmshConfig.h"
++#if defined(HAVE_FLTK)
++#define NOMINMAX
++// Opencascade define NOMSG and a bunch of other macros to avoid some
++// definitions from windows.h, but FLTK needs MSG macro.
++// Including windows.h at the beginning makes defining NOMSG irrelevant.
++#include "windows.h"
++#endif
+ #include "GmshDefines.h"
+ #include "GmshGlobal.h"
+ #include "MallocUtils.h"
+-- 
+GitLab
+
