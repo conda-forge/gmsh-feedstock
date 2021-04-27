@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.6.0" %}
-{% set sha256 = "0f2c55e50fb6c478ebc8977f6341c223754cbf3493b7b0d683b4395ae9f2ad1c" %}
+{% set version = "4.8.3" %}
+{% set sha256 = "26f248b129a00d1ea0658f024410c2490bcd9de724545a1144a092c604276775" %}
 
 package:
   name: gmsh-packages
@@ -14,7 +14,7 @@ source:
     - occ_convert_signal.patch
 
 build:
-  number: 2
+  number: 0
 
 outputs:
   - name: gmsh
