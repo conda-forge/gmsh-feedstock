@@ -1,0 +1,25 @@
+From bdcdbd2f09da1b5d5a6b04a5eb966269b5991d5f Mon Sep 17 00:00:00 2001
+From: Matthias Diener <mdiener@illinois.edu>
+Date: Tue, 27 Apr 2021 16:32:35 -0500
+Subject: [PATCH] wmain -> main
+
+---
+ Common/Main.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Common/Main.cpp b/Common/Main.cpp
+index 81eb10cc7..fc0d81d24 100644
+--- a/Common/Main.cpp
++++ b/Common/Main.cpp
+@@ -30,7 +30,7 @@ static char *toUTF8(wchar_t *src)
+   return out;
+ }
+ 
+-int wmain(int argc, wchar_t *wargv[], wchar_t *envp[])
++int main(int argc, wchar_t *wargv[], wchar_t *envp[])
+ {
+   char **argv = new char*[argc + 1];
+   for(int i = 0; i < argc; i++)
+-- 
+2.30.2
+
