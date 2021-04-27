@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
   patches:
     - patches/occ_convert_signal.patch
-    - patches/421.patch  # [win]
+    - patches/421.patch
 
 build:
   number: 0
