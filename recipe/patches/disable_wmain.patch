@@ -1,0 +1,13 @@
+diff --git a/Common/Main.cpp b/Common/Main.cpp
+index 6ea5173c4..7c1c5e0cd 100644
+--- a/Common/Main.cpp
++++ b/Common/Main.cpp
+@@ -6,7 +6,7 @@
+ #include <stdlib.h>
+ #include "GmshGlobal.h"
+ 
+-#if defined(WIN32) && !defined(__CYGWIN__)
++#if defined(WIN32) && !defined(__CYGWIN__) && !defined(HAVE_FLTK)
+ 
+ // in order to handle non-ASCII command line arguments on Windows, use wmain()
+ // instead of main() (we could also use main() and retrieve the "wide" args with
