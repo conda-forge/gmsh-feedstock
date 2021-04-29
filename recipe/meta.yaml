@@ -14,6 +14,7 @@ source:
     - patches/occ_convert_signal.patch
     - patches/fltk_nominmax.patch
     - patches/disable_wmain.patch
+    - patches/fix_and.patch
 
 build:
   number: 0
