@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}-source.tgz
-  url: http://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
+  url: https://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
   sha256: {{ sha256 }}
   patches:
     - patches/occ_convert_signal.patch
