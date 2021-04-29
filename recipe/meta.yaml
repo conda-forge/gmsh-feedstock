@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.8.3" %}
-{% set sha256 = "26f248b129a00d1ea0658f024410c2490bcd9de724545a1144a092c604276775" %}
+{% set version = "4.8.4" %}
+{% set sha256 = "760dbdc072eaa3c82d066c5ba3b06eacdd3304eb2a97373fe4ada9509f0b6ace" %}
 
 package:
   name: gmsh-packages
@@ -12,8 +12,6 @@ source:
   sha256: {{ sha256 }}
   patches:
     - patches/occ_convert_signal.patch
-    - patches/421.patch
-    - patches/0001-wmain-main.patch
 
 build:
   number: 0
