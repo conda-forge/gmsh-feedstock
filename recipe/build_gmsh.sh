@@ -1,7 +1,7 @@
 #!/bin/bash
 # see http://conda.pydata.org/docs/build.html for hacking instructions.
 
-set -e
+set -ex
 
 if [[ "$c_compiler" == "gcc" ]]; then
   export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib:${BUILD_PREFIX}/${HOST}/sysroot/usr/include"
