@@ -14,7 +14,6 @@ source:
     - patches/occ_convert_signal.patch
     - patches/fltk_nominmax.patch
     - patches/disable_wmain.patch
-    - patches/fix_and.patch
 
 build:
   number: 0
@@ -91,7 +90,7 @@ outputs:
         - gmsh
 
 about:
-  home: http://geuz.org/gmsh/
+  home: https://gmsh.info/
   license: GPL-2.0-or-later
   license_family: GPL
   license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
@@ -105,6 +104,8 @@ about:
     input to these modules is done either interactively using the graphical
     user interface or in ASCII text files using Gmsh's own scripting
     language.
+  dev_url: https://gitlab.onelab.info/gmsh/gmsh/
+  doc_url: https://gmsh.info/doc/texinfo/gmsh.html
 
 extra:
   recipe-maintainers:
@@ -112,3 +113,4 @@ extra:
     - isuruf
     - xywei
     - looooo
+    - matthiasdiener

@@ -1,7 +1,7 @@
-diff --git a/Common/Main.cpp b/Common/Main.cpp
+diff --git a/src/common/Main.cpp b/src/common/Main.cpp
 index 6ea5173c4..7c1c5e0cd 100644
---- a/Common/Main.cpp
-+++ b/Common/Main.cpp
+--- a/src/common/Main.cpp
++++ b/src/common/Main.cpp
 @@ -6,7 +6,7 @@
  #include <stdlib.h>
  #include "GmshGlobal.h"

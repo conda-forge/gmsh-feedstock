@@ -1,7 +1,7 @@
-diff --git a/Common/gmsh.cpp b/Common/gmsh.cpp
+diff --git a/src/common/gmsh.cpp b/src/common/gmsh.cpp
 index 31dc8961e..907d79447 100644
---- a/Common/gmsh.cpp
-+++ b/Common/gmsh.cpp
+--- a/src/common/gmsh.cpp
++++ b/src/common/gmsh.cpp
 @@ -5,6 +5,13 @@
  
  #include <sstream>

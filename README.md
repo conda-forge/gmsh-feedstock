@@ -1,13 +1,17 @@
 About gmsh-packages
 ===================
 
-Home: http://geuz.org/gmsh/
+Home: https://gmsh.info/
 
 Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmsh-feedstock/blob/master/LICENSE.txt)
 
 Summary: A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities
+
+Development: https://gitlab.onelab.info/gmsh/gmsh/
+
+Documentation: https://gmsh.info/doc/texinfo/gmsh.html
 
 Gmsh is a free 3D finite element grid generator with a build-in CAD
 engine and post-processor. Its design goal is to provide a fast, light
@@ -191,5 +195,6 @@ Feedstock Maintainers
 * [@guyer](https://github.com/guyer/)
 * [@isuruf](https://github.com/isuruf/)
 * [@looooo](https://github.com/looooo/)
+* [@matthiasdiener](https://github.com/matthiasdiener/)
 * [@xywei](https://github.com/xywei/)
 
