@@ -23,10 +23,15 @@ cmake ${CMAKE_ARGS} \
     -DENABLE_SLEPC=OFF \
     -DBLAS_LAPACK_LIBRARIES="$PREFIX/lib/libblas${SHLIB_EXT};$PREFIX/lib/liblapack${SHLIB_EXT}" \
     -DGMSH_RELEASE=1 \
-    .. | tee cmake.log 2>&1
+    ..
 
-make -j${CPU_COUNT} | tee make.log 2>&1
-make install | tee install.log 2>&1
+if [[ $target_platform == "osx-64" ]]; then
+  make
+else
+  make -j${CPU_COUNT}
+fi
+
+make install
 
 rm -f ${PREFIX}/lib/gmsh.py
 # vim: set ai et nu:
