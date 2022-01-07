@@ -23,13 +23,10 @@ cmake ${CMAKE_ARGS} \
     -DENABLE_SLEPC=OFF \
     -DBLAS_LAPACK_LIBRARIES="$PREFIX/lib/libblas${SHLIB_EXT};$PREFIX/lib/liblapack${SHLIB_EXT}" \
     -DGMSH_RELEASE=1 \
+    -DENABLE_TOUCHBAR=OFF \
     ..
 
-if [[ $target_platform == "osx-64" ]]; then
-  make
-else
-  make -j${CPU_COUNT}
-fi
+make -j${CPU_COUNT}
 
 make install
 
