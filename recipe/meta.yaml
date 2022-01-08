@@ -15,6 +15,7 @@ source:
     - patches/fltk_nominmax.patch
     - patches/disable_wmain.patch
     - patches/457.patch
+    - patches/458.patch
 
 build:
   number: 0

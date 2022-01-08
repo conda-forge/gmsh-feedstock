@@ -1,0 +1,52 @@
+From 4142e9e3549c5f2422ded36f18afd77c1f62e26a Mon Sep 17 00:00:00 2001
+From: Isuru Fernando <isuruf@gmail.com>
+Date: Sat, 8 Jan 2022 12:19:28 +0000
+Subject: [PATCH 1/2] Fallback to checking for gmsh.dll when gmsh-4.9.dll
+ doesn't exist
+
+---
+ api/GenApi.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/api/GenApi.py b/api/GenApi.py
+index c58857b3a..7bafee557 100644
+--- a/api/GenApi.py
++++ b/api/GenApi.py
+@@ -1152,6 +1152,8 @@ if not os.path.exists(libpath):
+ if not os.path.exists(libpath):
+     if platform.system() == "Windows":
+         libpath = find_library("{7}-{3}.{4}")
++        if not libpath:
++            libpath = find_library("{7}")
+     else:
+         libpath = find_library("{7}")
+ 
+-- 
+GitLab
+
+
+From 672ab0c5f64bbc2253f1fe4c48fd9e0b53121deb Mon Sep 17 00:00:00 2001
+From: Isuru Fernando <isuruf@gmail.com>
+Date: Sat, 8 Jan 2022 12:21:00 +0000
+Subject: [PATCH 2/2] propogate changes to gmsh.py
+
+---
+ api/gmsh.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/api/gmsh.py b/api/gmsh.py
+index 1a8a7819d..a34ed05bb 100644
+--- a/api/gmsh.py
++++ b/api/gmsh.py
+@@ -45,6 +45,8 @@ if not os.path.exists(libpath):
+ if not os.path.exists(libpath):
+     if platform.system() == "Windows":
+         libpath = find_library("gmsh-4.9")
++        if not libpath:
++            libpath = find_library("gmsh")
+     else:
+         libpath = find_library("gmsh")
+ 
+-- 
+GitLab
+
