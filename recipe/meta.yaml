@@ -72,8 +72,8 @@ outputs:
 
     test:
       commands:
-        - gmsh -help  # [build_platform == target_platform]
-        - test "$(gmsh --version 2>&1)" == "{{ version }}"   # [unix and (build_platform == target_platform)]
+        - gmsh -help
+        - test "$(gmsh --version 2>&1)" == "{{ version }}"   # [unix]
 
   - name: python-gmsh
     build:
