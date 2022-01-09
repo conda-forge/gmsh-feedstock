@@ -1,7 +1,7 @@
 #!/bin/bash
 # see http://conda.pydata.org/docs/build.html for hacking instructions.
 
-set -e
+set -ex
 
 if [[ "$c_compiler" == "gcc" ]]; then
   export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib:${BUILD_PREFIX}/${HOST}/sysroot/usr/include"
@@ -23,10 +23,12 @@ cmake ${CMAKE_ARGS} \
     -DENABLE_SLEPC=OFF \
     -DBLAS_LAPACK_LIBRARIES="$PREFIX/lib/libblas${SHLIB_EXT};$PREFIX/lib/liblapack${SHLIB_EXT}" \
     -DGMSH_RELEASE=1 \
-    .. | tee cmake.log 2>&1
+    -DENABLE_TOUCHBAR=OFF \
+    ..
 
-make -j${CPU_COUNT} | tee make.log 2>&1
-make install | tee install.log 2>&1
+make -j${CPU_COUNT}
+
+make install
 
 rm -f ${PREFIX}/lib/gmsh.py
 # vim: set ai et nu:

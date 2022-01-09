@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.8.4" %}
-{% set sha256 = "760dbdc072eaa3c82d066c5ba3b06eacdd3304eb2a97373fe4ada9509f0b6ace" %}
+{% set version = "4.9.3" %}
+{% set sha256 = "9e06751e9fef59ba5ba8e6feded164d725d7e9bc63e1cb327b083cbc7a993adb" %}
 
 package:
   name: gmsh-packages
@@ -14,7 +14,8 @@ source:
     - patches/occ_convert_signal.patch
     - patches/fltk_nominmax.patch
     - patches/disable_wmain.patch
-    - patches/fix_and.patch
+    - patches/457.patch
+    - patches/458.patch
 
 build:
   number: 0
@@ -23,8 +24,6 @@ outputs:
   - name: gmsh
     build:
       skip: true  # [win and vc<14]
-      ignore_run_exports:
-        - fltk
     script: build_gmsh.sh  # [not win]
     script: bld_gmsh.bat  # [win]
     requirements:
@@ -79,6 +78,7 @@ outputs:
   - name: python-gmsh
     build:
       noarch: python
+      skip: True   # [build_platform != target_platform]
     script: install_python.sh  # [not win]
     script: install_python.bat  # [win]
     requirements:
@@ -91,7 +91,7 @@ outputs:
         - gmsh
 
 about:
-  home: http://geuz.org/gmsh/
+  home: https://gmsh.info/
   license: GPL-2.0-or-later
   license_family: GPL
   license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
@@ -105,6 +105,8 @@ about:
     input to these modules is done either interactively using the graphical
     user interface or in ASCII text files using Gmsh's own scripting
     language.
+  dev_url: https://gitlab.onelab.info/gmsh/gmsh/
+  doc_url: https://gmsh.info/doc/texinfo/gmsh.html
 
 extra:
   recipe-maintainers:
@@ -112,3 +114,4 @@ extra:
     - isuruf
     - xywei
     - looooo
+    - matthiasdiener

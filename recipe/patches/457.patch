@@ -1,0 +1,24 @@
+From 56cee68be01482a8bae29ace0d1f99c45eab95e0 Mon Sep 17 00:00:00 2001
+From: Matthias Diener <matthias.diener@gmail.com>
+Date: Fri, 7 Jan 2022 21:33:47 +0000
+Subject: [PATCH] include algorithm for std::min
+
+---
+ tutorials/c++/t10.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tutorials/c++/t10.cpp b/tutorials/c++/t10.cpp
+index 4c0d1061c..29b4bce56 100644
+--- a/tutorials/c++/t10.cpp
++++ b/tutorials/c++/t10.cpp
+@@ -12,6 +12,7 @@
+ 
+ #include <set>
+ #include <sstream>
++#include <algorithm>
+ #include <gmsh.h>
+ 
+ int main(int argc, char **argv)
+-- 
+GitLab
+
