@@ -78,6 +78,7 @@ outputs:
   - name: python-gmsh
     build:
       noarch: python
+      skip: True   # [build_platform != target_platform]
     script: install_python.sh  # [not win]
     script: install_python.bat  # [win]
     requirements:
