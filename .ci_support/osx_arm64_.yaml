@@ -44,3 +44,23 @@ zip_keys:
   - cxx_compiler_version
 zlib:
 - '1.2'
+
+CONDA_BUILD_SYSROOT:
+- .c/MacOSX11.0.sdk
+
+
+CONDA_BUILD_SYSROOT:
+- .c/MacOSX11.0.sdk
+
+
+CONDA_BUILD_SYSROOT:
+- .c/MacOSX11.0.sdk
+
+
+CONDA_BUILD_SYSROOT:
+- .c/MacOSX11.0.sdk
+
+
+CONDA_BUILD_SYSROOT:
+- .c/MacOSX11.0.sdk
+
