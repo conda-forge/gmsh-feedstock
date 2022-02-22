@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.9.4" %}
-{% set sha256 = "acff3342d1907c429a4be3e4596ed44f6cd43fd5a94ab75667f4863cdcf2f769" %}
+{% set version = "4.9.5" %}
+{% set sha256 = "ffd64900844208719c88d91a66c281889023132b7a9e282c51548cb9f6f3ad44" %}
 
 package:
   name: gmsh-packages
@@ -75,7 +75,7 @@ outputs:
   - name: python-gmsh
     build:
       noarch: python
-      skip: True   # [build_platform != target_platform]
+      skip: true  # [build_platform != target_platform]
     script: install_python.sh  # [not win]
     script: install_python.bat  # [win]
     requirements:
