@@ -23,9 +23,9 @@ gmp:
 jpeg:
 - '9'
 libblas:
-- 3.8 *netlib
+- 3.9 *netlib
 liblapack:
-- 3.8 *netlib
+- 3.9 *netlib
 libpng:
 - '1.6'
 occt:
