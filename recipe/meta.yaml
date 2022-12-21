@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.11.0" %}
-{% set sha256 = "3cf2f24455ee09252c99e64d4e6462956e68f0ff1f37baca0b78c809d6cc557a" %}
+{% set version = "4.11.1" %}
+{% set sha256 = "c5fe1b7cbd403888a814929f2fd0f5d69e27600222a18c786db5b76e8005b365" %}
 
 package:
   name: gmsh-packages
@@ -15,7 +15,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: gmsh
