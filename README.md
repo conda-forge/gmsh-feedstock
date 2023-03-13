@@ -1,11 +1,58 @@
+About gmsh-packages-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmsh-feedstock/blob/main/LICENSE.txt)
+
 About gmsh-packages
-===================
+-------------------
 
 Home: https://gmsh.info/
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmsh-feedstock/blob/main/LICENSE.txt)
+Summary: A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities
+
+Development: https://gitlab.onelab.info/gmsh/gmsh/
+
+Documentation: https://gmsh.info/doc/texinfo/gmsh.html
+
+Gmsh is a free 3D finite element grid generator with a build-in CAD
+engine and post-processor. Its design goal is to provide a fast, light
+and user-friendly meshing tool with parametric input and advanced
+visualization capabilities. Gmsh is built around four modules:
+geometry, mesh, solver and post-processing. The specification of any
+input to these modules is done either interactively using the graphical
+user interface or in ASCII text files using Gmsh's own scripting
+language.
+
+About gmsh
+----------
+
+Home: https://gmsh.info/
+
+Package license: GPL-2.0-or-later
+
+Summary: A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities
+
+Development: https://gitlab.onelab.info/gmsh/gmsh/
+
+Documentation: https://gmsh.info/doc/texinfo/gmsh.html
+
+Gmsh is a free 3D finite element grid generator with a build-in CAD
+engine and post-processor. Its design goal is to provide a fast, light
+and user-friendly meshing tool with parametric input and advanced
+visualization capabilities. Gmsh is built around four modules:
+geometry, mesh, solver and post-processing. The specification of any
+input to these modules is done either interactively using the graphical
+user interface or in ASCII text files using Gmsh's own scripting
+language.
+
+About python-gmsh
+-----------------
+
+Home: https://gmsh.info/
+
+Package license: GPL-2.0-or-later
 
 Summary: A three-dimensional finite element mesh generator with built-in pre- and post-processing facilities
 
