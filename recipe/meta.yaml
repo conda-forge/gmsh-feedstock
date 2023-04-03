@@ -7,7 +7,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}-source.tgz
   url: https://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
   sha256: {{ sha256 }}
   patches:
@@ -15,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: gmsh
@@ -56,7 +55,7 @@ outputs:
 
       run:
         - gmp  # [not win]
-        - occt
+        - {{ pin_compatible('occt', max_pin='x.x.x') }}
         - libpng
         - jpeg
         - zlib
