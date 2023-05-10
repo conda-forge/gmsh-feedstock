@@ -24,6 +24,7 @@ cmake ${CMAKE_ARGS} \
     -DBLAS_LAPACK_LIBRARIES="$PREFIX/lib/libblas${SHLIB_EXT};$PREFIX/lib/liblapack${SHLIB_EXT}" \
     -DGMSH_RELEASE=1 \
     -DENABLE_TOUCHBAR=OFF \
+    -DENABLE_CAIRO=ON \
     ..
 
 make -j${CPU_COUNT}
