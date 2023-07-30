@@ -14,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 2
+  number: 3
 
 outputs:
   - name: gmsh
