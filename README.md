@@ -3,6 +3,7 @@ About gmsh-packages-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gmsh-feedstock/blob/main/LICENSE.txt)
 
+
 About gmsh-packages
 -------------------
 
@@ -25,6 +26,7 @@ input to these modules is done either interactively using the graphical
 user interface or in ASCII text files using Gmsh's own scripting
 language.
 
+
 About gmsh
 ----------
 
@@ -46,6 +48,7 @@ geometry, mesh, solver and post-processing. The specification of any
 input to these modules is done either interactively using the graphical
 user interface or in ASCII text files using Gmsh's own scripting
 language.
+
 
 About python-gmsh
 -----------------
