@@ -14,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 3
+  number: 4
 
 outputs:
   - name: gmsh
@@ -44,7 +44,7 @@ outputs:
         - occt
         - fltk
         - libpng
-        - jpeg
+        - libjpeg-turbo
         - libglu  # [linux]
         - zlib
         - xorg-libxfixes     # [linux]
@@ -58,7 +58,7 @@ outputs:
         - gmp  # [not win]
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
         - libpng
-        - jpeg
+        - libjpeg-turbo
         - zlib
         - libglu  # [linux]
         - xorg-libxfixes     # [linux]
