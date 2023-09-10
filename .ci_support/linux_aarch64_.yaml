@@ -22,10 +22,10 @@ docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 gmp:
 - '6'
-jpeg:
-- '9'
 libblas:
 - 3.9 *netlib
+libjpeg_turbo:
+- 2.1.5
 liblapack:
 - 3.9 *netlib
 libpng:
