@@ -14,7 +14,6 @@ cmake -G "NMake Makefiles" ^
       -D ENABLE_BUILD_SHARED=ON ^
       -D ENABLE_PETSC=OFF ^
       -D ENABLE_SLEPC=OFF ^
-      -D ENABLE_HXT=0 ^
       -D BLAS_LAPACK_LIBRARIES=%LIBRARY_PREFIX%\lib\lapack.lib;%LIBRARY_PREFIX%\lib\blas.lib ^
       -D GMSH_RELEASE=1 ^
       -D ENABLE_OPENMP=0 ^
