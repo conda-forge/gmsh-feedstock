@@ -107,6 +107,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - adrianinsaval
     - guyer
     - isuruf
     - xywei
