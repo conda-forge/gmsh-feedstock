@@ -1,5 +1,5 @@
 MACOSX_SDK_VERSION:  # [osx and x86_64]
   - 10.12            # [osx and x86_64]
 occt:
-  - 7.6
-  - 7.7
+  - 7.6.3
+  - 7.7.2
