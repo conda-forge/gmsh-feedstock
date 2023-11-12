@@ -1,15 +1,11 @@
-BUILD:
-- aarch64-conda_cos7-linux-gnu
 c_compiler:
 - gcc
 c_compiler_version:
 - '12'
 cairo:
 - '1'
-cdt_arch:
-- aarch64
 cdt_name:
-- cos7
+- cos6
 channel_sources:
 - conda-forge
 channel_targets:
@@ -31,12 +27,12 @@ liblapack:
 libpng:
 - '1.6'
 occt:
-- '7.6'
+- 7.6.3
 pin_run_as_build:
   occt:
     max_pin: x.x
 target_platform:
-- linux-aarch64
+- linux-64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version

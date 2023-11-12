@@ -1,5 +1,11 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+MACOSX_SDK_VERSION:
+- '10.12'
 c_compiler:
-- vs2019
+- clang
+c_compiler_version:
+- '16'
 cairo:
 - '1'
 channel_sources:
@@ -7,7 +13,11 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2019
+- clangxx
+cxx_compiler_version:
+- '16'
+gmp:
+- '6'
 libblas:
 - 3.9 *netlib
 libjpeg_turbo:
@@ -16,14 +26,17 @@ liblapack:
 - 3.9 *netlib
 libpng:
 - '1.6'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 occt:
-- '7.6'
+- 7.7.2
 pin_run_as_build:
   occt:
     max_pin: x.x
 target_platform:
-- win-64
-vc:
-- '14'
+- osx-64
+zip_keys:
+- - c_compiler_version
+  - cxx_compiler_version
 zlib:
 - '1.2'
