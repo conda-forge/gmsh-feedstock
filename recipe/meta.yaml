@@ -40,12 +40,12 @@ outputs:
       host:
         - libblas
         - liblapack
-        - gmp  # [not win]
+        - gmp                # [not win]
         - occt
         - fltk
         - libpng
         - libjpeg-turbo
-        - libglu  # [linux]
+        - libglu             # [linux]
         - zlib
         - xorg-libxfixes     # [linux]
         - xorg-libxext       # [linux]
@@ -76,7 +76,7 @@ outputs:
     build:
       noarch: python
       skip: true  # [build_platform != target_platform]
-    script: install_python.sh  # [not win]
+    script: install_python.sh   # [not win]
     script: install_python.bat  # [win]
     requirements:
       run:
