@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.11.1" %}
-{% set sha256 = "c5fe1b7cbd403888a814929f2fd0f5d69e27600222a18c786db5b76e8005b365" %}
+{% set version = "4.12.0" %}
+{% set sha256 = "2a6007872ba85abd9901914826f6986a2437ab7104f564ccefa1b7a3de742c17" %}
 
 package:
   name: gmsh-packages
@@ -14,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 6
+  number: 0
 
 outputs:
   - name: gmsh
@@ -76,7 +76,7 @@ outputs:
     build:
       noarch: python
       skip: true  # [build_platform != target_platform]
-    script: install_python.sh   # [not win]
+    script: install_python.sh  # [not win]
     script: install_python.bat  # [win]
     requirements:
       run:
