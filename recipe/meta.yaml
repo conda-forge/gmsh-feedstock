@@ -14,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: gmsh
@@ -27,6 +27,7 @@ outputs:
         - cmake
         - make  # [unix]
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - {{ cdt('libselinux') }}        # [linux]
         - {{ cdt('libxcb') }}            # [linux]
