@@ -8,17 +8,17 @@ jobs:
     vmImage: macOS-12
   strategy:
     matrix:
-      osx_64_occt7.6.3:
-        CONFIG: osx_64_occt7.6.3
-        UPLOAD_PACKAGES: 'True'
       osx_64_occt7.7.2:
         CONFIG: osx_64_occt7.7.2
         UPLOAD_PACKAGES: 'True'
-      osx_arm64_occt7.6.3:
-        CONFIG: osx_arm64_occt7.6.3
+      osx_64_occt7.8.1:
+        CONFIG: osx_64_occt7.8.1
         UPLOAD_PACKAGES: 'True'
       osx_arm64_occt7.7.2:
         CONFIG: osx_arm64_occt7.7.2
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_occt7.8.1:
+        CONFIG: osx_arm64_occt7.8.1
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}

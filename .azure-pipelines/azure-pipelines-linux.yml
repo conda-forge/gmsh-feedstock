@@ -8,28 +8,28 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_occt7.6.3:
-        CONFIG: linux_64_occt7.6.3
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_occt7.7.2:
         CONFIG: linux_64_occt7.7.2
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_occt7.6.3:
-        CONFIG: linux_aarch64_occt7.6.3
+      linux_64_occt7.8.1:
+        CONFIG: linux_64_occt7.8.1
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_occt7.7.2:
         CONFIG: linux_aarch64_occt7.7.2
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_ppc64le_occt7.6.3:
-        CONFIG: linux_ppc64le_occt7.6.3
+      linux_aarch64_occt7.8.1:
+        CONFIG: linux_aarch64_occt7.8.1
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_ppc64le_occt7.7.2:
         CONFIG: linux_ppc64le_occt7.7.2
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_ppc64le_occt7.8.1:
+        CONFIG: linux_ppc64le_occt7.8.1
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
