@@ -27,7 +27,7 @@ outputs:
         - cmake
         - make  # [unix]
         - {{ compiler('c') }}
-        - {{ stdlib("c") }}
+        - {{ stdlib('c') }}
         - {{ compiler('cxx') }}
         - {{ cdt('libselinux') }}        # [linux]
         - {{ cdt('libxcb') }}            # [linux]
