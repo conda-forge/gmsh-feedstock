@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.13.0" %}
-{% set sha256 = "9a71aecf1a5d3cbb9b2efe5e6a8b57cc628a552abb2be01781c4b85887d1e2c4" %}
+{% set version = "4.13.1" %}
+{% set sha256 = "77972145f431726026d50596a6a44fb3c1c95c21255218d66955806b86edbe8d" %}
 
 package:
   name: gmsh-packages
@@ -14,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 1
+  number: 0
 
 outputs:
   - name: gmsh
@@ -56,12 +56,8 @@ outputs:
         - cairo
 
       run:
-        - gmp  # [not win]
-        - {{ pin_compatible('occt', max_pin='x.x.x') }}
-        - libpng
-        - libjpeg-turbo
-        - zlib
-        - libglu  # [linux]
+        - gmp                # [not win]
+        - libglu             # [linux]
         - xorg-libxfixes     # [linux]
         - xorg-libxext       # [linux]
         - xorg-libxrender    # [linux]
