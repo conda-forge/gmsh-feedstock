@@ -1,5 +1,7 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 cairo:
 - '1'
 channel_sources:
@@ -26,4 +28,4 @@ target_platform:
 vc:
 - '14'
 zlib:
-- '1.2'
+- '1'
