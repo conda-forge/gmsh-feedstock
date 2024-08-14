@@ -81,7 +81,7 @@ outputs:
     script: install_python.bat  # [win]
     requirements:
       run:
-        - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}
+        - {{ pin_subpackage("gmsh", exact=True) }}
         - numpy
         - python
     test:
