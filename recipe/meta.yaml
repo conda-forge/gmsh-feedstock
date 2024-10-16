@@ -81,6 +81,8 @@ outputs:
     script: install_python.bat  # [win]
     requirements:
       run:
+        # this should pin build number as well,
+        # but we can't use exact=True while this is noarch
         - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}
         - numpy
         - python
