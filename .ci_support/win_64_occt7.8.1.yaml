@@ -1,5 +1,7 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 cairo:
 - '1'
 channel_sources:
@@ -17,13 +19,10 @@ liblapack:
 libpng:
 - '1.6'
 occt:
-- 7.6.3
-pin_run_as_build:
-  occt:
-    max_pin: x.x
+- 7.8.1
 target_platform:
 - win-64
 vc:
 - '14'
 zlib:
-- '1.2'
+- '1'

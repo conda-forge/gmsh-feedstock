@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.13.0" %}
-{% set sha256 = "9a71aecf1a5d3cbb9b2efe5e6a8b57cc628a552abb2be01781c4b85887d1e2c4" %}
+{% set version = "4.13.1" %}
+{% set sha256 = "77972145f431726026d50596a6a44fb3c1c95c21255218d66955806b86edbe8d" %}
 
 package:
   name: gmsh-packages
@@ -27,6 +27,7 @@ outputs:
         - cmake
         - make  # [unix]
         - {{ compiler('c') }}
+        - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
         - {{ cdt('libselinux') }}        # [linux]
         - {{ cdt('libxcb') }}            # [linux]
@@ -80,7 +81,7 @@ outputs:
     script: install_python.bat  # [win]
     requirements:
       run:
-        - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}
+        - {{ pin_subpackage("gmsh", exact=True) }}
         - numpy
         - python
     test:
