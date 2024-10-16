@@ -14,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: gmsh
@@ -81,7 +81,7 @@ outputs:
     script: install_python.bat  # [win]
     requirements:
       run:
-        - {{ pin_subpackage("gmsh", exact=True) }}
+        - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}
         - numpy
         - python
     test:
