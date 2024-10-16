@@ -14,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: gmsh
@@ -81,7 +81,9 @@ outputs:
     script: install_python.bat  # [win]
     requirements:
       run:
-        - {{ pin_subpackage("gmsh", exact=True) }}
+        # this should pin build number as well,
+        # but we can't use exact=True while this is noarch
+        - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}
         - numpy
         - python
     test:
