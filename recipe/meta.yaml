@@ -14,7 +14,7 @@ source:
     - patches/disable_wmain.patch
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: gmsh
@@ -85,8 +85,10 @@ outputs:
         # but we can't use exact=True while this is noarch
         - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}
         - numpy
-        - python
+        - python >={{ python_min }}
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - gmsh
 
