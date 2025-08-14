@@ -53,6 +53,7 @@ outputs:
         - xorg-libxrender    # [linux]
         - xorg-libx11        # [linux]
         - xorg-libxmu        # [linux]
+        - xorg-xorgproto     # [linux]
         - cairo
 
       run:
