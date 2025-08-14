@@ -7,6 +7,12 @@ if [[ "$c_compiler" == "gcc" ]]; then
   export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib:${BUILD_PREFIX}/${HOST}/sysroot/usr/include"
 fi
 
+# Ensure POSIX/XSI functions like strptime are declared on Linux builds
+if [[ "${target_platform}" == linux-* ]]; then
+  export CFLAGS="${CFLAGS} -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700"
+  export CXXFLAGS="${CXXFLAGS} -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700"
+fi
+
 # unpack.
 mkdir build
 cd build
