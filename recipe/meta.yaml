@@ -76,9 +76,8 @@ outputs:
   - name: python-gmsh
     build:
       noarch: python
-      skip: true  # [build_platform != target_platform]
+      skip: true  # [build_platform != target_platform or target_platform != "linux-64"]
     script: install_python.sh  # [not win]
-    script: install_python.bat  # [win]
     requirements:
       run:
         # this should pin build number as well,
