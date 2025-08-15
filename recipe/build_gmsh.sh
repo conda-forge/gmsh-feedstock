@@ -9,8 +9,8 @@ fi
 
 # Ensure POSIX/XSI functions like strptime are declared on Linux builds
 if [[ "${target_platform}" == linux-* ]]; then
-  export CFLAGS="${CFLAGS} -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700"
-  export CXXFLAGS="${CXXFLAGS} -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700"
+  export CFLAGS="${CFLAGS} -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700 -include strings.h"
+  export CXXFLAGS="${CXXFLAGS} -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700 -include strings.h"
 fi
 
 # unpack.
