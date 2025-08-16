@@ -94,8 +94,11 @@ outputs:
     test:
       requires:
         - python {{ python_min }}
+        - pip
       imports:
         - gmsh
+      commands:
+        - pip check
 
 about:
   home: https://gmsh.info/
