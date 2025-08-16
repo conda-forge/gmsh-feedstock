@@ -14,7 +14,13 @@ if [[ "${target_platform}" == linux-* ]]; then
 fi
 
 # unpack.
-mkdir build
+if [[ -d build ]]; then
+  echo "Unusual case, build/ exists; listing contents:"
+  ls -alR build
+else
+  echo "Nominal case: build/ does not exist"
+  mkdir build
+fi
 cd build
 
 # build.
