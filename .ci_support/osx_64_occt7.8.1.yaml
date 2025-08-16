@@ -34,6 +34,8 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 occt:
 - 7.8.1
+python_min:
+- '3.9'
 target_platform:
 - osx-64
 zip_keys:
