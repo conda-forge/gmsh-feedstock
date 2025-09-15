@@ -308,6 +308,7 @@ Feedstock Maintainers
 * [@guyer](https://github.com/guyer/)
 * [@isuruf](https://github.com/isuruf/)
 * [@looooo](https://github.com/looooo/)
+* [@maresb](https://github.com/maresb/)
 * [@matthiasdiener](https://github.com/matthiasdiener/)
 * [@xywei](https://github.com/xywei/)
 

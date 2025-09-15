@@ -35,7 +35,7 @@ macos_machine:
 occt:
 - 7.8.1
 python_min:
-- '3.9'
+- '3.10'
 target_platform:
 - osx-64
 zip_keys:
