@@ -8,7 +8,7 @@ if [[ "$c_compiler" == "gcc" ]]; then
 fi
 
 # unpack.
-mkdir build
+mkdir -p build
 cd build
 
 # build.
