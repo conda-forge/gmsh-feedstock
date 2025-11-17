@@ -66,6 +66,8 @@ outputs:
 
   - name: python-gmsh
     build:
+      # despite being noarch, we want to test this on windows due to
+      # the python code needing to load native libraries
       noarch: python
       skip: true  # [build_platform != target_platform]
     script: install_python.sh   # [unix]
