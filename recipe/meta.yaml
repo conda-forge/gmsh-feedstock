@@ -17,8 +17,6 @@ build:
 
 outputs:
   - name: gmsh
-    build:
-      skip: true  # [win and vc<14]
     script: build_gmsh.sh  # [not win]
     script: bld_gmsh.bat  # [win]
     requirements:
