@@ -44,7 +44,6 @@ outputs:
         - libpng
         - libjpeg-turbo
         - libglu             # [linux]
-        - libgl              # [linux]
         - zlib
         - xorg-libxfixes     # [linux]
         - xorg-libxext       # [linux]
@@ -54,21 +53,11 @@ outputs:
         - xorg-xorgproto     # [linux]
         - cairo
         - libgl-devel        # [linux]
+        - libgomp            # [linux]
+        - llvm-openmp        # [osx]
 
       run:
-        - gmp  # [not win]
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
-        - libpng
-        - libjpeg-turbo
-        - zlib
-        - libglu             # [linux]
-        - libgl              # [linux]
-        - _openmp_mutex      # [linux]
-        - xorg-libxfixes     # [linux]
-        - xorg-libxext       # [linux]
-        - xorg-libxrender    # [linux]
-        - xorg-libx11        # [linux]
-        - xorg-libxmu        # [linux]
 
     test:
       commands:
@@ -78,7 +67,7 @@ outputs:
   - name: python-gmsh
     build:
       noarch: python
-      skip: true  # [build_platform != target_platform or target_platform != "linux-64"]
+      skip: true  # [build_platform != target_platform]
     script: install_python.sh  # [unix]
     requirements:
       host:
