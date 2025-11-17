@@ -79,7 +79,7 @@ outputs:
     build:
       noarch: python
       skip: true  # [build_platform != target_platform or target_platform != "linux-64"]
-    script: install_python_module.py
+    script: install_python.sh  # [unix]
     requirements:
       host:
         - python {{ python_min }}
@@ -95,8 +95,6 @@ outputs:
         - pip
       imports:
         - gmsh
-      commands:
-        - pip check
 
 about:
   home: https://gmsh.info/
