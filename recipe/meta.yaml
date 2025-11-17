@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.13.1" %}
-{% set sha256 = "77972145f431726026d50596a6a44fb3c1c95c21255218d66955806b86edbe8d" %}
+{% set version = "4.15.0" %}
+{% set sha256 = "abb2632715bd7d0130ded7144fd6263635cd7dea883b8df61ba4da58ce6a1dfe" %}
 
 package:
   name: gmsh-packages
@@ -11,10 +11,9 @@ source:
   sha256: {{ sha256 }}
   patches:
     - patches/fltk_nominmax.patch
-    - patches/disable_wmain.patch
 
 build:
-  number: 2
+  number: 1
 
 outputs:
   - name: gmsh
@@ -56,6 +55,7 @@ outputs:
         - xorg-libxmu        # [linux]
         - xorg-xorgproto     # [linux]
         - cairo
+        - libgl-devel        # [linux]
 
       run:
         - gmp  # [not win]
@@ -120,6 +120,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - oliviertremblaynoel
     - adrianinsaval
     - guyer
     - isuruf
