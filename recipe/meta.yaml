@@ -80,7 +80,7 @@ outputs:
   - name: python-gmsh
     build:
       noarch: python
-      skip: true  # [build_platform != target_platform or target_platform != "linux-64" or occt != "7.8.1"]
+      skip: true  # [build_platform != target_platform or target_platform != "linux-64"]
     script: install_python_module.py
     requirements:
       host:
