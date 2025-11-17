@@ -68,7 +68,8 @@ outputs:
     build:
       noarch: python
       skip: true  # [build_platform != target_platform]
-    script: install_python.sh  # [unix]
+    script: install_python.sh   # [unix]
+    script: install_python.bat  # [win]
     requirements:
       host:
         - python {{ python_min }}
