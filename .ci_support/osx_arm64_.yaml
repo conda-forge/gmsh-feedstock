@@ -30,10 +30,12 @@ liblapack:
 - 3.9.* *netlib
 libpng:
 - '1.6'
+llvm_openmp:
+- '19'
 macos_machine:
 - arm64-apple-darwin20.0.0
 occt:
-- 7.8.1
+- 7.9.0
 python_min:
 - '3.10'
 target_platform:
