@@ -7,12 +7,19 @@ if [[ "$c_compiler" == "gcc" ]]; then
   export PATH="${PATH}:${BUILD_PREFIX}/${HOST}/sysroot/usr/lib:${BUILD_PREFIX}/${HOST}/sysroot/usr/include"
 fi
 
+# Ensure POSIX/XSI functions like strptime are declared on Linux builds
+if [[ "${target_platform}" == linux-* ]]; then
+  export CFLAGS="${CFLAGS} -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700 -include strings.h"
+  export CXXFLAGS="${CXXFLAGS} -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=700 -include strings.h"
+fi
+
 # unpack.
 mkdir -p build
 cd build
 
 # build.
 cmake ${CMAKE_ARGS} \
+    -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DCMAKE_INSTALL_LIBDIR=lib \

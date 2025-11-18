@@ -8,6 +8,7 @@ cd build
 
 :: Configure.
 cmake -G "NMake Makefiles" ^
+      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D ENABLE_OS_SPECIFIC_INSTALL=OFF ^
       -D ENABLE_BUILD_DYNAMIC=ON ^

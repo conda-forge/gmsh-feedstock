@@ -13,12 +13,10 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: gmsh
-    build:
-      skip: true  # [win and vc<14]
     script: build_gmsh.sh  # [not win]
     script: bld_gmsh.bat  # [win]
     requirements:
@@ -52,21 +50,14 @@ outputs:
         - xorg-libxrender    # [linux]
         - xorg-libx11        # [linux]
         - xorg-libxmu        # [linux]
+        - xorg-xorgproto     # [linux]
         - cairo
         - libgl-devel        # [linux]
+        - libgomp            # [linux]
+        - llvm-openmp        # [osx]
 
       run:
-        - gmp  # [not win]
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
-        - libpng
-        - libjpeg-turbo
-        - zlib
-        - libglu  # [linux]
-        - xorg-libxfixes     # [linux]
-        - xorg-libxext       # [linux]
-        - xorg-libxrender    # [linux]
-        - xorg-libx11        # [linux]
-        - xorg-libxmu        # [linux]
 
     test:
       commands:
@@ -75,18 +66,24 @@ outputs:
 
   - name: python-gmsh
     build:
+      # despite being noarch, we want to test this on windows due to
+      # the python code needing to load native libraries
       noarch: python
       skip: true  # [build_platform != target_platform]
-    script: install_python.sh  # [not win]
+    script: install_python.sh   # [unix]
     script: install_python.bat  # [win]
     requirements:
+      host:
+        - python {{ python_min }}
       run:
-        # this should pin build number as well,
-        # but we can't use exact=True while this is noarch
-        - {{ pin_subpackage("gmsh", max_pin="x.x.x") }}
+        # cannot use `pin_subpackage("gmsh", exact=True)` in noarch
+        - gmsh {{ version }} *_{{ PKG_BUILDNUM }}
         - numpy
-        - python
+        - python >={{ python_min }}
     test:
+      requires:
+        - python {{ python_min }}
+        - pip
       imports:
         - gmsh
 
@@ -114,6 +111,7 @@ extra:
     - adrianinsaval
     - guyer
     - isuruf
-    - xywei
     - looooo
+    - maresb
     - matthiasdiener
+    - xywei
