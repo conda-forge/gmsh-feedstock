@@ -13,7 +13,7 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 3
+  number: 4
 
 outputs:
   - name: gmsh
@@ -26,13 +26,6 @@ outputs:
         - {{ compiler('c') }}
         - {{ stdlib("c") }}
         - {{ compiler('cxx') }}
-        - {{ cdt('libselinux') }}        # [linux]
-        - {{ cdt('libxcb') }}            # [linux]
-        - {{ cdt('libxau') }}            # [linux]
-        - {{ cdt('libxdamage') }}        # [linux]
-        - {{ cdt('libxxf86vm') }}        # [linux]
-        - {{ cdt('mesa-libgl-devel') }}  # [linux]
-        - {{ cdt('mesa-dri-drivers') }}  # [linux]
         - python *
 
       host:
@@ -51,6 +44,7 @@ outputs:
         - xorg-libx11        # [linux]
         - xorg-libxmu        # [linux]
         - xorg-xorgproto     # [linux]
+        - libgl-devel        # [linux]
         - cairo
         - libgl-devel        # [linux]
         - libgomp            # [linux]
