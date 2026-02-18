@@ -19,6 +19,7 @@ cmake -G "NMake Makefiles" ^
       -D GMSH_RELEASE=1 ^
       -D ENABLE_OPENMP=0 ^
       -D ENABLE_CAIRO=1 ^
+      -D ENABLE_MED=1 ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 
