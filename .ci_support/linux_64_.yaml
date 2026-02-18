@@ -8,8 +8,6 @@ c_stdlib_version:
 - '2.17'
 cairo:
 - '1'
-cdt_name:
-- conda
 channel_sources:
 - conda-forge
 channel_targets:
@@ -28,6 +26,8 @@ libjpeg_turbo:
 - '3'
 liblapack:
 - 3.9.* *netlib
+libmed:
+- '4.2'
 libpng:
 - '1.6'
 occt:

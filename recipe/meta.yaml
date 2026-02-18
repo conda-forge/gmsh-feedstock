@@ -13,7 +13,7 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 4
+  number: 5
 
 outputs:
   - name: gmsh
@@ -49,6 +49,7 @@ outputs:
         - libgl-devel        # [linux]
         - libgomp            # [linux]
         - llvm-openmp        # [osx]
+        - libmed
 
       run:
         - {{ pin_compatible('occt', max_pin='x.x.x') }}

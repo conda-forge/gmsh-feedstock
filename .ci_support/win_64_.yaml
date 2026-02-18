@@ -16,6 +16,8 @@ libjpeg_turbo:
 - '3'
 liblapack:
 - 3.9.* *netlib
+libmed:
+- '4.2'
 libpng:
 - '1.6'
 occt:
