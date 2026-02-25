@@ -81,6 +81,8 @@ outputs:
         - pip
       imports:
         - gmsh
+      commands:
+        - python -c "import importlib.metadata; ver = importlib.metadata.version('gmsh'); assert ver == '{{ version }}', ver"
 
 about:
   home: https://gmsh.info/
