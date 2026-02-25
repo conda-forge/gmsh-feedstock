@@ -13,7 +13,7 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 5
+  number: 6
 
 outputs:
   - name: gmsh
@@ -81,6 +81,8 @@ outputs:
         - pip
       imports:
         - gmsh
+      commands:
+        - python -c "import importlib.metadata; ver = importlib.metadata.version('gmsh'); assert ver == '{{ version }}', ver"  # [unix]
 
 about:
   home: https://gmsh.info/
