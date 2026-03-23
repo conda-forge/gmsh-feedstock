@@ -10,6 +10,8 @@ cd build
 cmake -G "NMake Makefiles" ^
       -D CMAKE_POLICY_VERSION_MINIMUM=3.5 ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+      -D OpenMP_C_FLAGS="/openmp:llvm" ^
+      -D OpenMP_CXX_FLAGS="/openmp:llvm" ^
       -D ENABLE_OS_SPECIFIC_INSTALL=OFF ^
       -D ENABLE_BUILD_DYNAMIC=ON ^
       -D ENABLE_BUILD_SHARED=ON ^
@@ -17,7 +19,6 @@ cmake -G "NMake Makefiles" ^
       -D ENABLE_SLEPC=OFF ^
       -D BLAS_LAPACK_LIBRARIES=%LIBRARY_PREFIX%\lib\lapack.lib;%LIBRARY_PREFIX%\lib\blas.lib ^
       -D GMSH_RELEASE=1 ^
-      -D ENABLE_OPENMP=0 ^
       -D ENABLE_CAIRO=1 ^
       -D ENABLE_MED=1 ^
       %SRC_DIR%
