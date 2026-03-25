@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.15.0" %}
-{% set sha256 = "abb2632715bd7d0130ded7144fd6263635cd7dea883b8df61ba4da58ce6a1dfe" %}
+{% set version = "4.15.2" %}
+{% set sha256 = "be3f66f225d27ba9fa014f07e83169285da8a051b0e8ab7103d88066b39bdd3e" %}
 
 package:
   name: gmsh-packages
@@ -13,7 +13,7 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 6
+  number: 0
 
 outputs:
   - name: gmsh
@@ -65,7 +65,7 @@ outputs:
       # the python code needing to load native libraries
       noarch: python
       skip: true  # [build_platform != target_platform]
-    script: install_python.sh   # [unix]
+    script: install_python.sh  # [unix]
     script: install_python.bat  # [win]
     requirements:
       host:
