@@ -1,6 +1,6 @@
 {% set name = "gmsh" %}
-{% set version = "4.15.1" %}
-{% set sha256 = "eba8e4064f6586c8ca880f1cfdf697f4d70f026f398a93b458f247f7e4364fed" %}
+{% set version = "4.15.2" %}
+{% set sha256 = "be3f66f225d27ba9fa014f07e83169285da8a051b0e8ab7103d88066b39bdd3e" %}
 
 package:
   name: gmsh-packages
@@ -48,7 +48,7 @@ outputs:
         - cairo
         - libgl-devel        # [linux]
         - libgomp            # [linux]
-        - llvm-openmp        # [osx or win]
+        - llvm-openmp        # [not linux]
         - libmed
 
       run:
@@ -65,7 +65,7 @@ outputs:
       # the python code needing to load native libraries
       noarch: python
       skip: true  # [build_platform != target_platform]
-    script: install_python.sh   # [unix]
+    script: install_python.sh  # [unix]
     script: install_python.bat  # [win]
     requirements:
       host:
