@@ -7,9 +7,7 @@ mkdir build
 cd build
 
 :: Configure.
-cmake -G "NMake Makefiles" ^
-      -D CMAKE_C_FLAGS="-openmp:llvm -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE" ^
-      -D CMAKE_CXX_FLAGS="-openmp:llvm -D_CRT_SECURE_NO_WARNINGS -D_CRT_NONSTDC_NO_DEPRECATE" ^
+cmake -G "Visual Studio 17 2022" -A x64 -T ClangCL ^
       -D CMAKE_POLICY_VERSION_MINIMUM=3.5 ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -D ENABLE_OS_SPECIFIC_INSTALL=OFF ^
@@ -19,14 +17,14 @@ cmake -G "NMake Makefiles" ^
       -D ENABLE_SLEPC=OFF ^
       -D BLAS_LAPACK_LIBRARIES=%LIBRARY_PREFIX%\lib\lapack.lib;%LIBRARY_PREFIX%\lib\blas.lib ^
       -D GMSH_RELEASE=1 ^
-      -D ENABLE_OPENMP=1 ^
+      -D ENABLE_OPENMP=ON ^
       -D ENABLE_CAIRO=1 ^
       -D ENABLE_MED=1 ^
-      %SRC_DIR%
+      ..
 if errorlevel 1 exit 1
 
 :: Build.
-nmake package
+cmake --build . --target package
 if errorlevel 1 exit 1
 
 :: Test.
@@ -34,7 +32,7 @@ if errorlevel 1 exit 1
 :: if errorlevel 1 exit 1
 
 :: Install.
-nmake install
+cmake --build . --target install
 if errorlevel 1 exit 1
 
 del %LIBRARY_PREFIX%\lib\gmsh.py

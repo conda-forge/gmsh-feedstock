@@ -48,7 +48,7 @@ outputs:
         - cairo
         - libgl-devel        # [linux]
         - libgomp            # [linux]
-        - llvm-openmp        # [not linux]
+        - llvm-openmp        # [osx]
         - libmed
 
       run:
