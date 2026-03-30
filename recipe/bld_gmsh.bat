@@ -18,6 +18,9 @@ cmake -G "Visual Studio 17 2022" -A x64 -T ClangCL ^
       -D BLAS_LAPACK_LIBRARIES=%LIBRARY_PREFIX%\lib\lapack.lib;%LIBRARY_PREFIX%\lib\blas.lib ^
       -D GMSH_RELEASE=1 ^
       -D ENABLE_OPENMP=ON ^
+      -D OpenMP_C_LIB_NAMES=libiomp5md ^
+      -D OpenMP_CXX_LIB_NAMES=libiomp5md ^
+      -D OpenMP_libiomp5md_LIBRARY=%LIBRARY_PREFIX%\lib\libiomp5md.lib ^
       -D ENABLE_CAIRO=1 ^
       -D ENABLE_MED=1 ^
       ..
