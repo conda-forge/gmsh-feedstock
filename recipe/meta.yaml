@@ -13,7 +13,7 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 1
+  number: 2
 
 outputs:
   - name: gmsh
