@@ -49,12 +49,10 @@ outputs:
         - libgl-devel        # [linux]
         - libgomp            # [linux]
         - llvm-openmp        # [osx]
-        - intel-openmp       # [win]
         - libmed
 
       run:
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
-        - intel-openmp       # [win]
 
     test:
       commands:
