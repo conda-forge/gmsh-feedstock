@@ -13,7 +13,7 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 3
+  number: 4
 
 outputs:
   - name: gmsh
@@ -52,16 +52,7 @@ outputs:
         - libmed
 
       run:
-        - {{ pin_compatible('gmp') }}          # [not win]
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
-        - {{ pin_compatible('fltk') }}
-        - {{ pin_compatible('libpng') }}
-        - {{ pin_compatible('libjpeg-turbo') }}
-        - {{ pin_compatible('zlib') }}
-        - {{ pin_compatible('cairo') }}
-        - {{ pin_compatible('libmed') }}
-        - {{ pin_compatible('libgomp') }}      # [linux]
-        - {{ pin_compatible('llvm-openmp') }}  # [osx or win]
 
     test:
       commands:
