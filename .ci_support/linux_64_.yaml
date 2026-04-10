@@ -1,3 +1,7 @@
+blas_impl:
+- blis
+- mkl
+- openblas
 c_compiler:
 - gcc
 c_compiler_version:
