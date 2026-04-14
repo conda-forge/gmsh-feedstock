@@ -1,3 +1,0 @@
-openmp_impl:  # [win]
-  - llvm      # [win]
-  - intel     # [win]
