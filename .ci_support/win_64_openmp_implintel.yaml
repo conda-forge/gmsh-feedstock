@@ -22,6 +22,8 @@ libpng:
 - '1.6'
 occt:
 - 7.9.3
+openmp_impl:
+- intel
 python_min:
 - '3.10'
 target_platform:
