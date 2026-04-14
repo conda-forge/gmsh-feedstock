@@ -126,10 +126,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64</td>
+              <td>win_64_openmp_implintel</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5573&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=main&jobName=win&configuration=win%20win_64_openmp_implintel" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_openmp_implllvm</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=5573&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/gmsh-feedstock?branchName=main&jobName=win&configuration=win%20win_64_openmp_implllvm" alt="variant">
                 </a>
               </td>
             </tr>
