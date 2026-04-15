@@ -13,12 +13,15 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 6
+  number: 7
 
 outputs:
   - name: gmsh
     script: build_gmsh.sh  # [not win]
     script: bld_gmsh.bat  # [win]
+    build:
+      string: h{{ PKG_HASH }}_{{ openmp_impl }}_{{ PKG_BUILDNUM }}  # [win]
+      string: h{{ PKG_HASH }}_{{ PKG_BUILDNUM }}  # [not win]
     requirements:
       build:
         - cmake
@@ -48,7 +51,8 @@ outputs:
         - cairo
         - libgl-devel        # [linux]
         - libgomp            # [linux]
-        - llvm-openmp        # [osx or win]
+        - llvm-openmp        # [osx]
+        - {{ openmp_impl }}-openmp  # [win]
         - libmed
 
       run:
