@@ -7,8 +7,9 @@ mkdir build
 cd build
 
 if "%openmp_impl%" == "intel" (
-    set "OPENMP_ARGS=-DOpenMP_CXX_LIB_NAMES=libiomp5md"
-    set "OPENMP_ARGS=%OPENMP_ARGS% -DOpenMP_CXX_FLAGS=/clang:-fopenmp=libiomp5"
+    set "OPENMP_ARGS=-DOpenMP_C_LIB_NAMES=libiomp5md -DOpenMP_CXX_LIB_NAMES=libiomp5md"
+    set "OPENMP_ARGS=%OPENMP_ARGS% -DOpenMP_C_FLAGS="/clang:-fopenmp=libiomp5 /link /NODEFAULTLIB:vcomp.lib /NODEFAULTLIB:libomp.lib""
+    set "OPENMP_ARGS=%OPENMP_ARGS% -DOpenMP_CXX_FLAGS="/clang:-fopenmp=libiomp5 /link /NODEFAULTLIB:vcomp.lib /NODEFAULTLIB:libomp.lib""
     set "OPENMP_ARGS=%OPENMP_ARGS% -DOpenMP_libiomp5md_LIBRARY=%LIBRARY_LIB%\libiomp5md.lib"
     set "CONFIG_ARGS=-D "CMAKE_C_FLAGS=/O2 /arch:AVX2 -DWIN32" -D "CMAKE_CXX_FLAGS=/O2 /arch:AVX2 -DWIN32""
 ) else (
