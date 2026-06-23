@@ -34,6 +34,8 @@ cmake ${CMAKE_ARGS} \
     -DENABLE_CAIRO=ON \
     -DENABLE_MED=ON \
     -DENABLE_SYSTEM_CONTRIB=ON \
+    -DANN_LIB="$PREFIX/lib/libann${SHLIB_EXT}" \
+    -DANN_INC="$PREFIX/include" \
     ..
 
 make -j${CPU_COUNT}
