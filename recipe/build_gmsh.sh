@@ -33,6 +33,7 @@ cmake ${CMAKE_ARGS} \
     -DENABLE_TOUCHBAR=OFF \
     -DENABLE_CAIRO=ON \
     -DENABLE_MED=ON \
+    -DENABLE_SYSTEM_CONTRIB=ON \
     ..
 
 make -j${CPU_COUNT}
