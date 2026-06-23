@@ -20,6 +20,8 @@ libmed:
 - '4.2'
 libpng:
 - '1.6'
+metis:
+- 5.1.0
 occt:
 - 7.9.3
 openmp_impl:
@@ -28,5 +30,7 @@ python_min:
 - '3.10'
 target_platform:
 - win-64
+tinyxml2:
+- '11.0'
 zlib:
 - '1'

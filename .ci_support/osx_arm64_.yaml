@@ -36,12 +36,16 @@ llvm_openmp:
 - '19'
 macos_machine:
 - arm64-apple-darwin20.0.0
+metis:
+- 5.1.0
 occt:
 - 7.9.3
 python_min:
 - '3.10'
 target_platform:
 - osx-arm64
+tinyxml2:
+- '11.0'
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
