@@ -33,6 +33,8 @@ cmake -G "Visual Studio 17 2022" -A x64 -T ClangCL ^
       -D ENABLE_CAIRO=1 ^
       -D ENABLE_MED=1 ^
       -D ENABLE_SYSTEM_CONTRIB=ON ^
+      -D ANN_LIB=%LIBRARY_LIB%\ann.lib ^
+      -D ANN_INC=%LIBRARY_INC% ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 

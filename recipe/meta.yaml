@@ -13,7 +13,7 @@ source:
     - patches/fltk_nominmax.patch
 
 build:
-  number: 9
+  number: 10
 
 outputs:
   - name: gmsh
@@ -55,14 +55,17 @@ outputs:
         - {{ openmp_impl }}-openmp  # [win]
         - libmed
         # unvendored contrib libraries (gmsh ENABLE_SYSTEM_CONTRIB);
-        # ALGLIB, MathEx and ANN are not (fully) on conda-forge so stay vendored
+        # ALGLIB and MathEx are not on conda-forge so stay vendored
         - eigen
+        - ann
         - tinyxml2
         - metis
         - voro               # [not win]
 
       run:
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
+        # ann ships no run_exports, so pin it explicitly
+        - {{ pin_compatible('ann', max_pin='x.x') }}
 
     test:
       commands:
