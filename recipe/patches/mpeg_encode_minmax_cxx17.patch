@@ -1,0 +1,22 @@
+diff --git a/contrib/mpeg_encode/headers/general.h b/contrib/mpeg_encode/headers/general.h
+index f78dfd2..333ad4c 100644
+--- a/contrib/mpeg_encode/headers/general.h
++++ b/contrib/mpeg_encode/headers/general.h
+@@ -145,6 +145,17 @@ typedef int int32;
+  * MACROS *
+  *========*/
+ 
++// gmsh: the function-like min()/max() macros below poison the C++ standard
++// library headers that define std::min/std::max and numeric_limits::min/max.
++// In C++17 mode libstdc++'s <cmath> pulls in <bits/specfun.h> ->
++// <bits/stl_algobase.h>/<limits>, so any mpeg_encode TU that includes <math.h>
++// after this header fails with "macro min/max passed N arguments". Include
++// those headers here, before the macros are defined, so they are parsed
++// macro-free (later includes are no-ops thanks to their include guards).
++#include <cmath>
++#include <limits>
++#include <algorithm>
++
+ #undef max
+ #define max(a,b) ((a) > (b) ? (a) : (b))
+ #undef min

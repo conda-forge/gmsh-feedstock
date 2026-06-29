@@ -11,6 +11,7 @@ source:
     - patches/fltk_nominmax.patch
     - patches/cxx17_for_occt.patch
     - patches/occt800_api_compat.patch
+    - patches/mpeg_encode_minmax_cxx17.patch
 
 build:
   number: 9
