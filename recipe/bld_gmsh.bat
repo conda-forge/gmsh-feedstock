@@ -32,6 +32,7 @@ cmake -G "Visual Studio 17 2022" -A x64 -T ClangCL ^
       %OPENMP_ARGS% ^
       -D ENABLE_CAIRO=1 ^
       -D ENABLE_MED=1 ^
+      -D ENABLE_SYSTEM_CONTRIB=ON ^
       %SRC_DIR%
 if errorlevel 1 exit 1
 
