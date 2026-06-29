@@ -20,6 +20,7 @@ if "%openmp_impl%" == "intel" (
 cmake -G "Visual Studio 17 2022" -A x64 -T ClangCL ^
       -D CMAKE_POLICY_VERSION_MINIMUM=3.5 ^
       -D CMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
+      -DCMAKE_CXX_STANDARD=17 ^
       %CONFIG_ARGS% ^
       -D ENABLE_OS_SPECIFIC_INSTALL=OFF ^
       -D ENABLE_BUILD_DYNAMIC=ON ^

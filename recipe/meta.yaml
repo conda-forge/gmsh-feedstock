@@ -1,16 +1,17 @@
-{% set name = "gmsh" %}
 {% set version = "4.15.2" %}
-{% set sha256 = "be3f66f225d27ba9fa014f07e83169285da8a051b0e8ab7103d88066b39bdd3e" %}
 
 package:
   name: gmsh-packages
   version: {{ version }}
 
 source:
-  url: https://gmsh.info/src/{{ name }}-{{ version }}-source.tgz
-  sha256: {{ sha256 }}
+  url: https://gmsh.info/src/gmsh-{{ version }}-source.tgz
+  sha256: be3f66f225d27ba9fa014f07e83169285da8a051b0e8ab7103d88066b39bdd3e
   patches:
     - patches/fltk_nominmax.patch
+    - patches/cxx17_for_occt.patch
+    - patches/occt800_api_compat.patch
+    - patches/mpeg_encode_minmax_cxx17.patch
 
 build:
   number: 9

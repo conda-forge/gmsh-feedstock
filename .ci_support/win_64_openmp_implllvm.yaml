@@ -23,7 +23,7 @@ libpng:
 metis:
 - 5.1.0
 occt:
-- 7.9.3
+- 8.0.0
 openmp_impl:
 - llvm
 python_min:
