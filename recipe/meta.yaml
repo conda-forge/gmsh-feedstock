@@ -10,6 +10,7 @@ source:
   patches:
     - patches/fltk_nominmax.patch
     - patches/cxx17_for_occt.patch
+    - patches/occt800_api_compat.patch
 
 build:
   number: 9
