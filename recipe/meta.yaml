@@ -9,6 +9,7 @@ source:
   sha256: be3f66f225d27ba9fa014f07e83169285da8a051b0e8ab7103d88066b39bdd3e
   patches:
     - patches/fltk_nominmax.patch
+    - patches/cxx17_for_occt.patch
 
 build:
   number: 9
