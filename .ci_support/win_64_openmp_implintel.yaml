@@ -23,11 +23,11 @@ libpng:
 metis:
 - 5.1.0
 occt:
-- 8.0.0
+- 8.0.1
 openmp_impl:
 - intel
 python_min:
-- '3.10'
+- '3.11'
 target_platform:
 - win-64
 tinyxml2:

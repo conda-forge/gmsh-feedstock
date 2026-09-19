@@ -14,7 +14,7 @@ source:
     - patches/mpeg_encode_minmax_cxx17.patch
 
 build:
-  number: 10
+  number: 11
 
 outputs:
   - name: gmsh
