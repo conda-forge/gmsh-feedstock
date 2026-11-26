@@ -14,7 +14,7 @@ source:
     - patches/mpeg_encode_minmax_cxx17.patch
 
 build:
-  number: 12
+  number: 13
 
 outputs:
   - name: gmsh
@@ -65,10 +65,17 @@ outputs:
 
       run:
         - {{ pin_compatible('occt', max_pin='x.x.x') }}
+        # no run_exports; gmsh.dll needs symbols missing from older releases
+        - {{ pin_compatible('intel-openmp', max_pin=None) }}  # [win and openmp_impl == "intel"]
 
     test:
+      requires:
+        - python             # [win]
+        - pefile             # [win]
       commands:
         - gmsh -help
+        # gmsh -help passes wherever Visual Studio's libomp140.x86_64.dll is installed
+        - python -c "import os, sys, pefile; pe = pefile.PE(os.path.join(sys.prefix, 'Library', 'bin', 'gmsh.dll')); dlls = {e.dll.decode().lower() for e in pe.DIRECTORY_ENTRY_IMPORT}; print(sorted(dlls)); assert '{{ 'libiomp5md.dll' if openmp_impl == 'intel' else 'libomp.dll' }}' in dlls; assert 'libomp140.x86_64.dll' not in dlls; assert 'vcomp140.dll' not in dlls"  # [win]
         - test "$(gmsh --version 2>&1)" == "{{ version }}"   # [unix]
 
   - name: python-gmsh
